@@ -1,15 +1,3 @@
-/* ===========================================================
-   LIONSTRIDE MANAGEMENT — Main JavaScript v2
-   Refined: Tags, carousel, asymmetric grid support
-   -----------------------------------------------------------
-   1. Init
-   2. Navigation
-   3. Sticky Header
-   4. Featured Carousel
-   5. Dynamic Content (athletes + news)
-   6. Contact Form
-   7. Utilities
-   =========================================================== */
 
 document.addEventListener('DOMContentLoaded', init);
 
@@ -18,16 +6,11 @@ function init() {
     initAOS();
     initNav();
     initStickyHeader();
-    initParallax();      // Scroll-driven parallax for hero + athlete images
+    initParallax();     
     initFeaturedCarousel();
     loadDynamicContent();
     initContactForm();
 }
-
-/* ===========================================================
-   1. PARALLAX — Hero Backgrounds & Athlete Images
-   Uses requestAnimationFrame for 60fps performance.
-   =========================================================== */
 function initParallax() {
     const layers      = document.querySelectorAll('.parallax-layer');
     const athleteImgs = document.querySelectorAll('.athlete-img img');
@@ -40,26 +23,21 @@ function initParallax() {
         const scrollY = window.scrollY;
         const vh      = window.innerHeight;
 
-        // ---- Hero parallax: layers move at different speeds relative to scroll ----
         layers.forEach(el => {
             const speed = parseFloat(el.dataset.parallaxSpeed) || 0.3;
-            // Only apply while hero is on screen
             const inHero = scrollY < heroTop + heroHeight;
             if (!inHero) return;
             const yOffset = (scrollY - heroTop) * speed;
             el.style.transform = `translate3d(0, ${yOffset}px, 0)`;
         });
 
-        // ---- Athlete image parallax: shift as cards move through viewport ----
-        // Uses CSS custom property so it composes with hover scale
         athleteImgs.forEach(img => {
             const card = img.closest('.athlete-card');
             if (!card) return;
             const rect       = card.getBoundingClientRect();
             const cardCenter = rect.top + rect.height / 2;
             const vhCenter   = vh / 2;
-            // Subtle vertical shift (max ±12px) — composes with hover scale via CSS var
-            const offset = Math.max(-12, Math.min(12, (vhCenter - cardCenter) * 0.06));
+             const offset = Math.max(-12, Math.min(12, (vhCenter - cardCenter) * 0.06));
             img.style.setProperty('--parallax-y', `${offset}px`);
         });
 
@@ -76,10 +54,6 @@ function initParallax() {
     // Run once on load
     update();
 }
-
-/* ===========================================================
-   2. AOS
-   =========================================================== */
 function initAOS() {
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -90,10 +64,6 @@ function initAOS() {
         });
     }
 }
-
-/* ===========================================================
-   2. NAVIGATION
-   =========================================================== */
 function initNav() {
     const menuBtn    = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -128,7 +98,6 @@ function initNav() {
         });
     }
 
-    // Active link tracking on scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -145,10 +114,6 @@ function initNav() {
 
     sections.forEach(section => observer.observe(section));
 }
-
-/* ===========================================================
-   3. STICKY HEADER
-   =========================================================== */
 function initStickyHeader() {
     const header = document.getElementById('site-header');
     if (!header) return;
@@ -164,10 +129,6 @@ function initStickyHeader() {
         }
     }, { passive: true });
 }
-
-/* ===========================================================
-   4. FEATURED CAROUSEL
-   =========================================================== */
 function initFeaturedCarousel() {
     const track   = document.getElementById('featured-track');
     const dots    = document.getElementById('ctrl-dots');
@@ -255,10 +216,6 @@ function initFeaturedCarousel() {
         track.addEventListener('mouseleave', startTimer);
     }
 }
-
-/* ===========================================================
-   5. DYNAMIC CONTENT
-   =========================================================== */
 async function loadDynamicContent() {
     const athletesGrid = document.getElementById('athletes-grid');
     const newsGrid      = document.getElementById('news-grid');
@@ -272,8 +229,6 @@ async function loadDynamicContent() {
 
     if (typeof AOS !== 'undefined') AOS.refresh();
 }
-
-/* ---- Athletes Grid ---- */
 async function loadAthletes(container) {
     try {
         const athletes = await fetchJSON('athletes.json');
@@ -285,8 +240,7 @@ async function loadAthletes(container) {
             card.setAttribute('data-aos', 'fade-up');
             card.setAttribute('data-aos-delay', String(i * 80));
 
-            // Championship/achievement tag icons
-            const tagsHtml = (a.tags || []).map(tag => {
+             const tagsHtml = (a.tags || []).map(tag => {
                 const isAward = tag.includes('Champ') || tag.includes('Gold') || tag.includes('Major') || tag.includes('MVP') || tag.includes('Record') || tag.includes('Winner');
                 return `<span class="athlete-tag">${isAward ? laurelSvg : ''}<span>${tag}</span></span>`;
             }).join('');
@@ -316,14 +270,10 @@ async function loadAthletes(container) {
         container.innerHTML = '<p class="placeholder-text">Athlete data unavailable.</p>';
     }
 }
-
-/* Small SVG laurel wreath icon for championship tags */
 const laurelSvg = `<svg class="tag-icon" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M6 13C6 13 2 10 2 6C2 4 3 2 6 1C3 2 2 4 2 6C2 10 6 13 6 13Z" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/>
     <path d="M6 13C6 13 10 10 10 6C10 4 9 2 6 1C9 2 10 4 10 6C10 10 6 13 6 13Z" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/>
 </svg>`;
-
-/* ---- Outreach Targets ---- */
 async function loadTargets(container) {
     try {
         const targets = await fetchJSON('targets.json');
@@ -335,7 +285,6 @@ async function loadTargets(container) {
             card.setAttribute('data-aos', 'fade-up');
             card.setAttribute('data-aos-delay', String(i * 100));
 
-            // Build detail rows with inline SVG icons
             const detailsHtml = (t.details || []).map(d => `
                 <div class="target-detail-row">
                     <span class="target-detail-icon" aria-hidden="true">${targetIcon(d.icon)}</span>
@@ -382,8 +331,6 @@ function targetIcon(name) {
     };
     return icons[name] || icons.globe;
 }
-
-/* ---- News Grid ---- */
 async function loadNews(container) {
     try {
         const articles = await fetchJSON('news.json');
@@ -417,13 +364,6 @@ async function loadNews(container) {
         container.innerHTML = '<p class="placeholder-text">News data unavailable.</p>';
     }
 }
-
-/* ===========================================================
-   6. CONTACT FORM — mailto: implementation
-   No backend required. Works on GitHub Pages.
-   Validates fields → builds a URL-encoded mailto: link →
-   opens the user's email client pre-filled with all data.
-   =========================================================== */
 function initContactForm() {
     const RECIPIENT = 'contact@lionstridemanagement.com';
 
@@ -436,25 +376,18 @@ function initContactForm() {
     form.addEventListener('submit', e => {
         e.preventDefault();
 
-        // --- Collect field values ---
         const name    = form.querySelector('#name').value.trim();
         const email   = form.querySelector('#email').value.trim();
         const subject = form.querySelector('#subject').value.trim();
         const message = form.querySelector('#message').value.trim();
 
-        // --- Client-side validation ---
-        if (!name || !email || !subject || !message) {
+         if (!name || !email || !subject || !message) {
             if (errorEl) errorEl.hidden = false;
             return;
         }
         if (errorEl) errorEl.hidden = true;
 
-        /*
-         * Build the email body.
-         * Each field is labelled clearly so the recipient
-         * can read the email without any formatting issues.
-         */
-        const body = [
+         const body = [
             'MESSAGE FROM WEBSITE',
             '─────────────────────────────',
             '',
@@ -469,28 +402,19 @@ function initContactForm() {
             'Sent via LionStride Management website',
         ].join('\n');
 
-        /*
-         * URL-encode every component so special characters
-         * (spaces, accents, newlines, &, =, etc.) survive
-         * the mailto: protocol intact.
-         */
         const mailtoSubject = encodeURIComponent(`Message from website — ${subject}`);
         const mailtoBody    = encodeURIComponent(body);
         const mailtoLink    = `mailto:${RECIPIENT}?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-        // Open the email client
         window.location.href = mailtoLink;
 
-        // Show the success notice and hide the form fields
         form.querySelectorAll('.field-row, .field-group, .btn-submit')
             .forEach(el => { el.style.display = 'none'; });
         successEl.hidden = false;
 
-        // Reset so the form is fresh if the user returns
         form.reset();
     });
 
-    // Hide the error notice as soon as the user starts typing again
     form.querySelectorAll('.field-input').forEach(input => {
         input.addEventListener('input', () => {
             if (errorEl) errorEl.hidden = true;
@@ -498,9 +422,6 @@ function initContactForm() {
     });
 }
 
-/* ===========================================================
-   7. UTILITIES
-   =========================================================== */
 async function fetchJSON(url) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Failed to fetch ${url}`);
