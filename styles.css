@@ -429,3 +429,164 @@ h1, h2, h3, h4 {
     background: var(--clr-gold);
     border-radius: 50%;
 }
+/* ------------------------------------------------------------
+   9. FEATURED CAROUSEL
+   ------------------------------------------------------------ */
+.featured-section {
+    background: var(--clr-bg-2);
+    overflow: hidden;
+}
+
+.featured-track {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--clr-card);
+    border: 0.5px solid var(--clr-border);
+    min-height: 520px;
+}
+
+.featured-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s var(--ease-out);
+    pointer-events: none;
+}
+.featured-slide.active { opacity: 1; pointer-events: auto; }
+
+.featured-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.featured-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 56px;
+    max-width: 600px;
+}
+
+.featured-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    margin-bottom: 20px;
+}
+
+.featured-name {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 300;
+    color: var(--clr-text);
+    line-height: 0.95;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------
+   10. ATHLETES GRID — ASYMMETRIC PREMIUM LAYOUT
+   ------------------------------------------------------------ */
+.athletes-section { background: var(--clr-bg); }
+
+.athletes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 420px;
+    gap: 16px;
+}
+
+/* First card — larger, spanning 2 rows */
+.athlete-card:first-child {
+    grid-row: span 2;
+}
+
+.athlete-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--clr-card);
+    border: 0.5px solid var(--clr-border);
+    cursor: pointer;
+    transition: all var(--dur-slow) var(--ease-out);
+}
+
+.athlete-card:hover {
+    border-color: var(--clr-border-gold);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+    transform: translateY(-6px);
+    z-index: 2;
+}
+
+.athlete-img {
+    position: absolute;
+    inset: 0;
+}
+
+.athlete-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: saturate(0.7);
+    transition: transform var(--dur-slow) var(--ease-out), filter var(--dur-slow) ease;
+}
+
+.athlete-card:hover .athlete-img img {
+    transform: scale(1.06);
+    filter: saturate(0.9);
+}
+
+.athlete-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 10, 12, 0.1) 0%,
+        rgba(10, 10, 12, 0.98) 100%
+    );
+}
+
+.athlete-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 24px;
+    z-index: 2;
+}
+
+.athlete-name {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.athlete-profile-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all var(--dur-base) var(--ease-out);
+    margin-top: 10px;
+}
+
+.athlete-card:hover .athlete-profile-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
