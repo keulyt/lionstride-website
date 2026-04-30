@@ -583,9 +583,6 @@ h1, h2, h3, h4 {
     opacity: 1;
     transform: translateY(0);
 }
-/* ------------------------------------------------------------
-   11. NEWS
-   ------------------------------------------------------------ */
 .news-section { background: var(--clr-bg-2); }
 
 .news-grid {
@@ -622,9 +619,6 @@ h1, h2, h3, h4 {
 
 .news-card:hover .news-title { color: var(--clr-gold-light); }
 
-/* ------------------------------------------------------------
-   12. CONTACT
-   ------------------------------------------------------------ */
 .contact-section { background: var(--clr-bg); }
 
 .contact-grid {
@@ -698,9 +692,6 @@ h1, h2, h3, h4 {
     margin-top: 6px;
 }
 
-/* ------------------------------------------------------------
-   13. FOOTER
-   ------------------------------------------------------------ */
 .site-footer {
     padding: 80px var(--gutter) 40px;
     background: var(--clr-bg);
