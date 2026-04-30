@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete Profile — LionStride Management</title>
+    <meta name="description" content="Athlete profile page — LionStride Management elite sports representation.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           ATHLETE PROFILE PAGE — Design System
+           Inherits color/font identity from main site
+           ============================================================ */
+
+        /* --- Tokens --- */
+        :root {
+            --clr-bg:          #0a0a0c;
+            --clr-bg-2:        #0e0e12;
+            --clr-surface:     #131318;
+            --clr-card:        #18181f;
+            --clr-card-2:      #1c1c24;
+            --clr-border:      rgba(255, 255, 255, 0.06);
+            --clr-border-gold: rgba(201, 168, 76, 0.25);
+            --clr-gold:        #c9a84c;
+            --clr-gold-light:  #dfc276;
+            --clr-gold-dim:    rgba(201, 168, 76, 0.09);
+            --clr-text:        #f0ece4;
+            --clr-text-2:      #a8a49c;
+            --clr-text-3:      #6b6760;
+            --font-display:    'Cormorant Garamond', Georgia, serif;
+            --font-body:       'Inter', 'Helvetica Neue', sans-serif;
+            --radius-sm:       4px;
+            --radius-md:       8px;
+            --radius-lg:       14px;
+            --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+            --max-w:           1200px;
+            --gutter:          clamp(20px, 5vw, 80px);
+        }
+
+        /* --- Reset --- */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+        ::selection { background: var(--clr-gold); color: var(--clr-bg); }
+
+        /* --- Grain texture --- */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        /* ============================================================
+           HEADER
+           ============================================================ */
+        .profile-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 12, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 0.5px solid rgba(201, 168, 76, 0.1);
+        }
+        .profile-header-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .profile-wordmark {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        .profile-wordmark span { color: var(--clr-gold); }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--clr-text-2);
+            border: 0.5px solid var(--clr-border);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            transition: all 0.25s ease;
+        }
+        .back-btn:hover { border-color: var(--clr-gold); color: var(--clr-gold); }
+
+        /* ============================================================
+           LOADING STATE
+           ============================================================ */
+        .loading-state {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            color: var(--clr-text-3);
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+        }
+        .loading-spinner {
+            width: 32px;
+            height: 32px;
+            border: 1.5px solid var(--clr-border);
+            border-top-color: var(--clr-gold);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .error-state {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            text-align: center;
+            padding: 40px var(--gutter);
+        }
+        .error-state h2 { font-family: var(--font-display); font-size: 2rem; color: var(--clr-text); }
+        .error-state p { color: var(--clr-text-2); font-size: 0.9rem; }
+
+        /* ============================================================
+           PROFILE WRAPPER
+           ============================================================ */
+        .profile-page {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 52px var(--gutter) 80px;
+            display: none; /* Hidden until data loaded */
+            position: relative;
+            z-index: 1;
+        }
+        .profile-page.visible { display: block; }
+
+        /* ============================================================
+           1. HERO CARD — Image + Basic Info
+           ============================================================ */
+        .profile-hero {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 0;
+            background: var(--clr-card);
+            border: 0.5px solid var(--clr-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        /* Athlete Photo */
+        .profile-photo {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            background: var(--clr-surface);
+        }
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            filter: saturate(0.85);
+            transition: filter 0.4s ease;
+        }
+        .profile-photo:hover img { filter: saturate(1); }
+        .profile-photo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, transparent 60%, var(--clr-card) 100%);
+        }
+
+        /* Athlete Info Panel */
+        .profile-info {
+            padding: 40px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .profile-eyebrow {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--clr-gold);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .profile-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 0.5px;
+            background: var(--clr-gold);
+        }
+
+        .profile-name {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 4vw, 3.6rem);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: var(--clr-text);
+            margin-bottom: 28px;
+        }
+
+        /* Info Fields (reference image layout: label + value pairs) */
+        .info-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-bottom: 32px;
+        }
+        .info-field {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            align-items: baseline;
+            padding: 10px 0;
+            border-bottom: 0.5px solid var(--clr-border);
+            gap: 16px;
+        }
+        .info-field:first-child { border-top: 0.5px solid var(--clr-border); }
+        .info-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--clr-text-3);
+        }
+        .info-value {
+            font-size: 0.92rem;
+            font-weight: 400;
+            color: var(--clr-text);
+        }
+
+        /* Tags */
+        .profile-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .profile-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--clr-gold);
+            background: var(--clr-gold-dim);
+            border: 0.5px solid var(--clr-border-gold);
+            padding: 5px 12px;
+            border-radius: var(--radius-sm);
+        }
+
+        /* ============================================================
+           SHARED SECTION CARD STYLES
+           ============================================================ */
+        .profile-card {
+            background: var(--clr-card);
+            border: 0.5px solid var(--clr-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 28px;
+            border-bottom: 0.5px solid var(--clr-border);
+            background: var(--clr-card-2);
+        }
+        .card-header-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clr-gold);
+        }
+        .card-header-title {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--clr-text-2);
+        }
+        .card-body { padding: 28px; }
+
+        /* ============================================================
+           2. PERSONAL BESTS SECTION
+           ============================================================ */
+        .personal-bests-header {
+            padding: 20px 28px 0;
+        }
+        .personal-bests-label {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--clr-text-3);
+            margin-bottom: 16px;
+        }
+        .bests-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+        .best-item {
+            padding: 20px 28px;
+            border-right: 0.5px solid var(--clr-border);
+        }
+        .best-item:last-child { border-right: none; }
+        .best-event {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--clr-text-3);
+            margin-bottom: 8px;
+        }
+        .best-value {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--clr-gold);
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+
+        /* ============================================================
+           3. ATHLETE OVERVIEW
+           ============================================================ */
+        .overview-text {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: var(--clr-text-2);
+            line-height: 1.85;
+        }
+
+        /* ============================================================
+           4. RACE PLAN TABLE
+           ============================================================ */
+        .race-table-wrap { overflow-x: auto; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        thead tr {
+            background: var(--clr-surface);
+        }
+        th {
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--clr-text-3);
+            padding: 12px 16px;
+            text-align: left;
+            white-space: nowrap;
+            border-bottom: 0.5px solid var(--clr-border);
+        }
+        td {
+            padding: 14px 16px;
+            color: var(--clr-text-2);
+            font-size: 0.85rem;
+            border-bottom: 0.5px solid var(--clr-border);
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        tr:last-child td { border-bottom: none; }
+        tbody tr { transition: background 0.15s ease; }
+        tbody tr:hover { background: var(--clr-card-2); }
+        .td-race { font-weight: 500; color: var(--clr-text); }
+        .td-goal {
+            display: inline-flex;
+            padding: 3px 10px;
+            background: var(--clr-gold-dim);
+            border: 0.5px solid var(--clr-border-gold);
+            border-radius: var(--radius-sm);
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--clr-gold);
+            letter-spacing: 0.05em;
+        }
+
+        /* ============================================================
+           5. FINANCIAL PROJECTION
+           ============================================================ */
+        .projection-table-wrap { overflow-x: auto; }
+        .proj-scenario {
+            font-weight: 600;
+            color: var(--clr-text);
+        }
+        .proj-earned {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--clr-gold);
+        }
+        .proj-fee { color: var(--clr-text-3); }
+        .proj-row-breakthrough td { background: rgba(201, 168, 76, 0.03); }
+
+        /* ============================================================
+           6. VALUE / BENEFITS
+           ============================================================ */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+        .value-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            padding: 32px 20px;
+            border-right: 0.5px solid var(--clr-border);
+            text-align: center;
+            transition: background 0.2s ease;
+        }
+        .value-item:last-child { border-right: none; }
+        .value-item:hover { background: var(--clr-card-2); }
+        .value-icon {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--clr-gold-dim);
+            border: 0.5px solid var(--clr-border-gold);
+            border-radius: 50%;
+            color: var(--clr-gold);
+            transition: all 0.25s ease;
+        }
+        .value-item:hover .value-icon {
+            background: var(--clr-gold);
+            color: var(--clr-bg);
+        }
+        .value-label {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--clr-text-2);
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .profile-footer {
+            background: var(--clr-bg-2);
+            border-top: 0.5px solid rgba(201, 168, 76, 0.1);
+            padding: 28px var(--gutter);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .profile-footer p {
+            font-size: 0.72rem;
+            color: var(--clr-text-3);
+            letter-spacing: 0.1em;
+        }
+        .profile-footer a {
+            color: var(--clr-gold);
+            transition: opacity 0.2s;
+        }
+        .profile-footer a:hover { opacity: 0.7; }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 900px) {
+            .profile-hero { grid-template-columns: 1fr; }
+            .profile-photo { aspect-ratio: 16 / 9; }
+            .profile-photo-overlay { background: linear-gradient(to bottom, transparent 60%, var(--clr-card) 100%); }
+            .bests-grid { grid-template-columns: repeat(2, 1fr); }
+            .best-item:nth-child(2) { border-right: none; }
+            .best-item:nth-child(3) { border-right: 0.5px solid var(--clr-border); }
+            .value-grid { grid-template-columns: repeat(2, 1fr); }
+            .value-item:nth-child(2) { border-right: none; }
+            .value-item:nth-child(3) { border-right: 0.5px solid var(--clr-border); }
+            .info-field { grid-template-columns: 110px 1fr; }
+            .profile-info { padding: 28px 24px; }
+        }
+
+        @media (max-width: 600px) {
+            .bests-grid { grid-template-columns: 1fr 1fr; }
+            .value-grid { grid-template-columns: 1fr 1fr; }
+            th, td { padding: 10px 12px; }
+            .profile-name { font-size: 2rem; }
+            .card-body { padding: 20px; }
+        }
+
+        /* Focus styles */
+        :focus-visible {
+            outline: 1px solid var(--clr-gold);
+            outline-offset: 3px;
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .loading-spinner { animation: none; }
+            * { transition-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================
+         HEADER
+         ============================================================ -->
+    <header class="profile-header">
+        <div class="profile-header-inner">
+            <a href="index.html" class="profile-wordmark">
+                Lion<span>Stride</span>
+            </a>
+            <a href="index.html#athletes" class="back-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Back to Roster
+            </a>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         LOADING STATE
+         ============================================================ -->
+    <div class="loading-state" id="loading-state" aria-live="polite">
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <span>Loading athlete profile…</span>
+    </div>
+
+    <!-- ============================================================
+         ERROR STATE
+         ============================================================ -->
+    <div class="error-state" id="error-state" style="display:none;" aria-live="assertive">
+        <h2>Athlete Not Found</h2>
+        <p>We couldn't find the athlete you're looking for.</p>
+        <br>
+        <a href="index.html#athletes" class="back-btn">← Back to Roster</a>
+    </div>
+
+    <!-- ============================================================
+         ATHLETE PROFILE (rendered by JS)
+         ============================================================ -->
+    <main class="profile-page" id="profile-page" aria-labelledby="profile-name-heading">
+
+        <!-- 1. HERO: Photo + Info -->
+        <section class="profile-hero" id="profile-hero">
+            <div class="profile-photo" id="profile-photo">
+                <img id="profile-img" src="" alt="">
+                <div class="profile-photo-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="profile-info">
+                <div class="profile-eyebrow" id="profile-sport-eyebrow"></div>
+                <h1 class="profile-name" id="profile-name-heading"></h1>
+                <div class="info-fields" id="info-fields"></div>
+                <div class="profile-tags" id="profile-tags"></div>
+            </div>
+        </section>
+
+        <!-- 2. PERSONAL BESTS -->
+        <section class="profile-card" id="bests-section" aria-labelledby="bests-heading">
+            <div class="card-header">
+                <div class="card-header-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <h2 class="card-header-title" id="bests-heading">Personal Bests</h2>
+            </div>
+            <div class="bests-grid" id="bests-grid"></div>
+        </section>
+
+        <!-- 3. OVERVIEW -->
+        <section class="profile-card" aria-labelledby="overview-heading">
+            <div class="card-header">
+                <div class="card-header-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <h2 class="card-header-title" id="overview-heading">Athlete Overview</h2>
+            </div>
+            <div class="card-body">
+                <p class="overview-text" id="overview-text"></p>
+            </div>
+        </section>
+
+        <!-- 4. RACE PLAN TABLE -->
+        <section class="profile-card" aria-labelledby="race-plan-heading">
+            <div class="card-header">
+                <div class="card-header-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <h2 class="card-header-title" id="race-plan-heading">Race Plan &amp; Schedule</h2>
+            </div>
+            <div class="race-table-wrap card-body" style="padding-top:0;padding-bottom:0;">
+                <table id="race-table" aria-label="Race plan and schedule">
+                    <thead>
+                        <tr>
+                            <th scope="col">Event</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Prize Pool (Top)</th>
+                            <th scope="col">Goal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="race-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 5. FINANCIAL PROJECTION -->
+        <section class="profile-card" aria-labelledby="finance-heading">
+            <div class="card-header">
+                <div class="card-header-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                </div>
+                <h2 class="card-header-title" id="finance-heading">Financial Projection <span style="color:var(--clr-text-3);font-weight:400;">(Management Fee 15%)</span></h2>
+            </div>
+            <div class="projection-table-wrap card-body" style="padding-top:0;padding-bottom:0;">
+                <table id="proj-table" aria-label="Financial projection">
+                    <thead>
+                        <tr>
+                            <th scope="col">Scenario</th>
+                            <th scope="col">Race Results</th>
+                            <th scope="col">Prize Earned (Est.)</th>
+                            <th scope="col">LionStride Fee (15%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="proj-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 6. VALUE WE BRING -->
+        <section class="profile-card" aria-labelledby="value-heading">
+            <div class="card-header">
+                <div class="card-header-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h2 class="card-header-title" id="value-heading">Value We Bring</h2>
+            </div>
+            <div class="value-grid" id="value-grid"></div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="profile-footer">
+        <p>
+            <a href="index.html">LionStride Management</a>
+            &nbsp;—&nbsp; Building Champions Globally &nbsp;·&nbsp;
+            &copy; <span id="footer-year"></span>
+        </p>
+    </footer>
+
+    <script>
+    /* ===========================================================
+       ATHLETE PROFILE — Dynamic Renderer
+       Reads ?id= from URL, fetches athletes.json, renders data
+       =========================================================== */
+
+    // Set footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // SVG icons for the value/benefits section
+    const ICONS = {
+        trophy: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>`,
+        handshake: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.42 4.58a5.4 5.4 0 00-7.65 0l-.77.78-.77-.78a5.4 5.4 0 00-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/></svg>`,
+        chart: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
+        globe: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>`,
+        plane: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.62a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.2a16 16 0 006.16 6.16l1.56-1.56a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>`,
+    };
+
+    /* -----------------------------------------------------------
+       Main: Parse URL → Fetch JSON → Find athlete → Render
+       ----------------------------------------------------------- */
+    async function loadProfile() {
+        const loadingEl = document.getElementById('loading-state');
+        const errorEl   = document.getElementById('error-state');
+        const pageEl    = document.getElementById('profile-page');
+
+        // Read ?id= from URL
+        const params = new URLSearchParams(window.location.search);
+        const athleteId = params.get('id');
+
+        if (!athleteId) {
+            showError(loadingEl, errorEl);
+            return;
+        }
+
+        try {
+            const res      = await fetch('athletes.json');
+            if (!res.ok) throw new Error('Fetch failed');
+            const athletes = await res.json();
+            const athlete  = athletes.find(a => a.id === athleteId);
+
+            if (!athlete) {
+                showError(loadingEl, errorEl);
+                return;
+            }
+
+            // Update page title
+            document.title = `${athlete.name} — LionStride Management`;
+
+            // Render all sections
+            renderHero(athlete);
+            renderBests(athlete);
+            renderOverview(athlete);
+            renderRacePlan(athlete);
+            renderFinancials(athlete);
+            renderValues(athlete);
+
+            // Show page, hide loader
+            loadingEl.style.display = 'none';
+            pageEl.classList.add('visible');
+
+        } catch (err) {
+            console.error('Profile load error:', err);
+            showError(loadingEl, errorEl);
+        }
+    }
+
+    function showError(loadingEl, errorEl) {
+        loadingEl.style.display = 'none';
+        errorEl.style.display = 'flex';
+    }
+
+    /* -----------------------------------------------------------
+       Section Renderers
+       ----------------------------------------------------------- */
+
+    function renderHero(a) {
+        // Photo
+        const img = document.getElementById('profile-img');
+        img.src = a.image;
+        img.alt = `Photo of ${a.name}`;
+
+        // Eyebrow (sport)
+        document.getElementById('profile-sport-eyebrow').textContent = a.sport;
+
+        // Name
+        document.getElementById('profile-name-heading').textContent = a.name;
+
+        // Info fields
+        const fields = [
+            { label: 'Nationality', value: a.nationality },
+            { label: 'Age',         value: a.age },
+            { label: 'Specialty',   value: a.specialty },
+        ];
+        document.getElementById('info-fields').innerHTML = fields.map(f => `
+            <div class="info-field">
+                <span class="info-label">${f.label}</span>
+                <span class="info-value">${f.value}</span>
+            </div>
+        `).join('');
+
+        // Tags
+        document.getElementById('profile-tags').innerHTML = (a.tags || []).map(tag => `
+            <span class="profile-tag">
+                <svg width="9" height="9" viewBox="0 0 12 14" fill="none" stroke="currentColor" stroke-width="0.8">
+                    <path d="M6 13C6 13 2 10 2 6C2 4 3 2 6 1C3 2 2 4 2 6C2 10 6 13 6 13Z" stroke-linecap="round"/>
+                    <path d="M6 13C6 13 10 10 10 6C10 4 9 2 6 1C9 2 10 4 10 6C10 10 6 13 6 13Z" stroke-linecap="round"/>
+                </svg>
+                ${tag}
+            </span>
+        `).join('');
+    }
+
+    function renderBests(a) {
+        document.getElementById('bests-grid').innerHTML = (a.personalBests || []).map(b => `
+            <div class="best-item">
+                <div class="best-event">${b.label}</div>
+                <div class="best-value">${b.value}</div>
+            </div>
+        `).join('');
+    }
+
+    function renderOverview(a) {
+        document.getElementById('overview-text').textContent = a.description;
+    }
+
+    function renderRacePlan(a) {
+        document.getElementById('race-tbody').innerHTML = (a.racePlan || []).map(r => `
+            <tr>
+                <td class="td-race">${r.event}</td>
+                <td>${r.country}</td>
+                <td>${r.distance}</td>
+                <td>${r.date}</td>
+                <td>${r.prize}</td>
+                <td><span class="td-goal">${r.goal}</span></td>
+            </tr>
+        `).join('');
+    }
+
+    function renderFinancials(a) {
+        document.getElementById('proj-tbody').innerHTML = (a.financialProjection || []).map((p, i) => `
+            <tr class="${i === a.financialProjection.length - 1 ? 'proj-row-breakthrough' : ''}">
+                <td class="proj-scenario">${p.scenario}</td>
+                <td>${p.results}</td>
+                <td class="proj-earned">${p.earned}</td>
+                <td class="proj-fee">${p.fee}</td>
+            </tr>
+        `).join('');
+    }
+
+    function renderValues(a) {
+        document.getElementById('value-grid').innerHTML = (a.valueBenefits || []).map(v => `
+            <div class="value-item">
+                <div class="value-icon" aria-hidden="true">
+                    ${ICONS[v.icon] || ICONS.globe}
+                </div>
+                <span class="value-label">${v.label}</span>
+            </div>
+        `).join('');
+    }
+
+    // Boot
+    loadProfile();
+    </script>
+</body>
+
+</html>
