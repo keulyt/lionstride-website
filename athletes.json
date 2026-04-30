@@ -1,0 +1,206 @@
+[
+    {
+        "id": "marcus-thorne",
+        "name": "Marcus Thorne",
+        "sport": "Football · NFL",
+        "nationality": "United States",
+        "age": 28,
+        "specialty": "Quarterback / Pocket Passer",
+        "image": "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=600&h=900&fit=crop&crop=faces",
+        "description": "Marcus is a disciplined and composed pocket passer with elite football IQ and a proven track record across 8 NFL seasons. He is ready to lead a franchise and take his legacy to the highest level.",
+        "tags": ["5× Pro Bowler", "MVP 2019", "Super Bowl Champ"],
+        "personalBests": [
+            { "label": "Pass Yards / Season", "value": "4,847" },
+            { "label": "Completion %", "value": "68.4%" },
+            { "label": "TD / INT Ratio", "value": "38 / 8" },
+            { "label": "QB Rating", "value": "112.4" }
+        ],
+        "racePlan": [
+            { "event": "NFC Championship", "country": "USA 🇺🇸", "distance": "Playoffs", "date": "Jan 2026", "prize": "$150,000", "goal": "MVP" },
+            { "event": "Super Bowl LX", "country": "USA 🇺🇸", "distance": "Finals", "date": "Feb 2026", "prize": "$300,000", "goal": "Champion" },
+            { "event": "Pro Bowl", "country": "USA 🇺🇸", "distance": "All-Star", "date": "Feb 2026", "prize": "$75,000", "goal": "Starter" },
+            { "event": "Season Opener", "country": "USA 🇺🇸", "distance": "Regular", "date": "Sep 2026", "prize": "$50,000", "goal": "Top 5 QB" }
+        ],
+        "financialProjection": [
+            { "scenario": "Conservative", "results": "Playoff appearance", "earned": "$180,000", "fee": "$27,000" },
+            { "scenario": "Realistic", "results": "Conference finalist", "earned": "$420,000", "fee": "$63,000" },
+            { "scenario": "Breakthrough", "results": "Super Bowl MVP", "earned": "$1,200,000+", "fee": "$180,000+" }
+        ],
+        "valueBenefits": [
+            { "icon": "trophy", "label": "Contract Negotiation" },
+            { "icon": "handshake", "label": "Endorsement Deals" },
+            { "icon": "chart", "label": "Career Planning" },
+            { "icon": "globe", "label": "Global Exposure" }
+        ]
+    },
+    {
+        "id": "elena-vance",
+        "name": "Elena Vance",
+        "sport": "Tennis · WTA",
+        "nationality": "Russia",
+        "age": 26,
+        "specialty": "Baseline / All-Court",
+        "image": "https://images.unsplash.com/photo-1546539782-6fc531453083?w=600&h=800&fit=crop&crop=faces",
+        "description": "Elena is a relentless competitor with a powerful baseline game and exceptional mental resilience. A three-time Grand Slam champion now targeting calendar-year dominance on the WTA tour.",
+        "tags": ["3× Grand Slam", "World No. 1", "Olympic Gold"],
+        "personalBests": [
+            { "label": "Highest Ranking", "value": "World No. 1" },
+            { "label": "Grand Slams Won", "value": "3" },
+            { "label": "Win/Loss Ratio", "value": "82%" },
+            { "label": "Fastest Serve", "value": "195 km/h" }
+        ],
+        "racePlan": [
+            { "event": "Australian Open", "country": "AUS 🇦🇺", "distance": "Grand Slam", "date": "Jan 2026", "prize": "€2,900,000", "goal": "Final" },
+            { "event": "French Open", "country": "FRA 🇫🇷", "distance": "Grand Slam", "date": "May 2026", "prize": "€2,900,000", "goal": "Champion" },
+            { "event": "Wimbledon", "country": "GBR 🇬🇧", "distance": "Grand Slam", "date": "Jul 2026", "prize": "€2,900,000", "goal": "Champion" },
+            { "event": "US Open", "country": "USA 🇺🇸", "distance": "Grand Slam", "date": "Aug 2026", "prize": "€3,600,000", "goal": "Top 4" }
+        ],
+        "financialProjection": [
+            { "scenario": "Conservative", "results": "Semifinals all Slams", "earned": "€1,200,000", "fee": "€180,000" },
+            { "scenario": "Realistic", "results": "2 Slam titles", "earned": "€6,000,000", "fee": "€900,000" },
+            { "scenario": "Breakthrough", "results": "Calendar Grand Slam", "earned": "€12,000,000+", "fee": "€1,800,000+" }
+        ],
+        "valueBenefits": [
+            { "icon": "trophy", "label": "Tournament Placement" },
+            { "icon": "handshake", "label": "Sponsorship Strategy" },
+            { "icon": "chart", "label": "Career Growth" },
+            { "icon": "globe", "label": "Global Media" }
+        ]
+    },
+    {
+        "id": "jordan-rivers",
+        "name": "Jordan Rivers",
+        "sport": "Basketball · NBA",
+        "nationality": "United States",
+        "age": 29,
+        "specialty": "Point Guard / Playmaker",
+        "image": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=800&fit=crop&crop=faces",
+        "description": "Jordan redefines the modern point guard. His elite court vision, leadership under pressure, and scoring versatility make him one of the most valuable players in the league today.",
+        "tags": ["5× All-Star", "3× Champion", "Assist Leader"],
+        "personalBests": [
+            { "label": "Points Per Game", "value": "27.4" },
+            { "label": "Assists Per Game", "value": "10.2" },
+            { "label": "Season High Points", "value": "61" },
+            { "label": "Championship Rings", "value": "3" }
+        ],
+        "racePlan": [
+            { "event": "NBA Finals", "country": "USA 🇺🇸", "distance": "Championship", "date": "Jun 2026", "prize": "$500,000", "goal": "Champion" },
+            { "event": "All-Star Game", "country": "USA 🇺🇸", "distance": "Exhibition", "date": "Feb 2026", "prize": "$100,000", "goal": "MVP" },
+            { "event": "Playoffs R1", "country": "USA 🇺🇸", "distance": "Postseason", "date": "Apr 2026", "prize": "$250,000", "goal": "Sweep" },
+            { "event": "Season Start", "country": "USA 🇺🇸", "distance": "Regular", "date": "Oct 2025", "prize": "Salary", "goal": "Top 5 PG" }
+        ],
+        "financialProjection": [
+            { "scenario": "Conservative", "results": "1st Round exit", "earned": "$350,000", "fee": "$52,500" },
+            { "scenario": "Realistic", "results": "Conference Finals", "earned": "$750,000", "fee": "$112,500" },
+            { "scenario": "Breakthrough", "results": "Finals MVP", "earned": "$2,000,000+", "fee": "$300,000+" }
+        ],
+        "valueBenefits": [
+            { "icon": "trophy", "label": "Contract Negotiation" },
+            { "icon": "handshake", "label": "Brand Partnerships" },
+            { "icon": "chart", "label": "Financial Planning" },
+            { "icon": "globe", "label": "Global Exposure" }
+        ]
+    },
+    {
+        "id": "sarah-jenkins",
+        "name": "Sarah Jenkins",
+        "sport": "Athletics · World Athletics",
+        "nationality": "Jamaica",
+        "age": 24,
+        "specialty": "100m / 200m Sprint",
+        "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&h=800&fit=crop&crop=faces",
+        "description": "Sarah is an explosive sprinter with blistering acceleration and world-record credentials. Competing on the global stage, she represents the next generation of elite track and field performance.",
+        "tags": ["World Record", "2× Olympic Gold", "Diamond League"],
+        "personalBests": [
+            { "label": "100m", "value": "10.54s" },
+            { "label": "200m", "value": "21.34s" },
+            { "label": "60m (Indoor)", "value": "6.98s" },
+            { "label": "4×100m Relay", "value": "41.02s" }
+        ],
+        "racePlan": [
+            { "event": "Diamond League Doha", "country": "QAT 🇶🇦", "distance": "100m", "date": "May 2026", "prize": "$50,000", "goal": "Win" },
+            { "event": "World Championships", "country": "JPN 🇯🇵", "distance": "100m/200m", "date": "Aug 2026", "prize": "$70,000", "goal": "Gold" },
+            { "event": "Diamond League Final", "country": "USA 🇺🇸", "distance": "100m", "date": "Sep 2026", "prize": "$100,000", "goal": "Champion" },
+            { "event": "Commonwealth Games", "country": "AUS 🇦🇺", "distance": "200m", "date": "Oct 2026", "prize": "$30,000", "goal": "Gold" }
+        ],
+        "financialProjection": [
+            { "scenario": "Conservative", "results": "Top 5 all meets", "earned": "$80,000", "fee": "$12,000" },
+            { "scenario": "Realistic", "results": "3 meet wins + Worlds medal", "earned": "$220,000", "fee": "$33,000" },
+            { "scenario": "Breakthrough", "results": "World Champion + DL title", "earned": "$500,000+", "fee": "$75,000+" }
+        ],
+        "valueBenefits": [
+            { "icon": "trophy", "label": "Race Placement" },
+            { "icon": "handshake", "label": "Negotiation & Support" },
+            { "icon": "chart", "label": "Career Growth" },
+            { "icon": "globe", "label": "Global Exposure" }
+        ]
+    },
+    {
+        "id": "leo-sterling",
+        "name": "Leo Sterling",
+        "sport": "Football · Premier League",
+        "nationality": "England",
+        "age": 27,
+        "specialty": "Central Midfielder / Playmaker",
+        "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=800&fit=crop&crop=faces",
+        "description": "Leo is a technically gifted midfielder with exceptional vision, work rate, and leadership. A consistent performer at the highest club level, he is now targeting international silverware.",
+        "tags": ["PFA Player of Year", "50+ Assists", "Champions League"],
+        "personalBests": [
+            { "label": "Goals This Season", "value": "18" },
+            { "label": "Assists This Season", "value": "22" },
+            { "label": "Pass Accuracy", "value": "91.4%" },
+            { "label": "Distance Covered", "value": "11.8 km/game" }
+        ],
+        "racePlan": [
+            { "event": "Champions League Final", "country": "EU 🇪🇺", "distance": "Cup Final", "date": "May 2026", "prize": "€5,000,000", "goal": "Winner" },
+            { "event": "FA Cup", "country": "GBR 🇬🇧", "distance": "Cup", "date": "May 2026", "prize": "£1,000,000", "goal": "Top Scorer" },
+            { "event": "World Cup Qualifier", "country": "GBR 🇬🇧", "distance": "Intl.", "date": "Mar 2026", "prize": "N/A", "goal": "Starting XI" },
+            { "event": "Premier League Season", "country": "GBR 🇬🇧", "distance": "League", "date": "Aug–May", "prize": "£20M salary", "goal": "PL Title" }
+        ],
+        "financialProjection": [
+            { "scenario": "Conservative", "results": "Top 4 league finish", "earned": "£800,000", "fee": "£120,000" },
+            { "scenario": "Realistic", "results": "CL + PL double", "earned": "£6,000,000", "fee": "£900,000" },
+            { "scenario": "Breakthrough", "results": "Ballon d'Or candidate", "earned": "£20,000,000+", "fee": "£3,000,000+" }
+        ],
+        "valueBenefits": [
+            { "icon": "trophy", "label": "Contract Negotiation" },
+            { "icon": "handshake", "label": "Endorsement Deals" },
+            { "icon": "chart", "label": "Wealth Management" },
+            { "icon": "globe", "label": "Global Branding" }
+        ]
+    },
+    {
+        "id": "maya-chen",
+        "name": "Maya Chen",
+        "sport": "Golf · LPGA",
+        "nationality": "China",
+        "age": 25,
+        "specialty": "Full Game / Course Management",
+        "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=600&h=800&fit=crop&crop=faces",
+        "description": "Maya is a technically complete golfer with extraordinary course management and a composure beyond her years. A two-time major champion already considered a defining figure of her generation.",
+        "tags": ["2× Major Winner", "World No. 3", "Solheim Cup"],
+        "personalBests": [
+            { "label": "Lowest Round", "value": "62 (−10)" },
+            { "label": "Driving Distance", "value": "278 yards avg." },
+            { "label": "Putting Average", "value": "1.69 putts/hole" },
+            { "label": "LPGA Wins", "value": "11" }
+        ],
+        "racePlan": [
+            { "event": "ANA Inspiration", "country": "USA 🇺🇸", "distance": "Major", "date": "Apr 2026", "prize": "$1,000,000", "goal": "Win" },
+            { "event": "US Women's Open", "country": "USA 🇺🇸", "distance": "Major", "date": "Jun 2026", "prize": "$1,000,000", "goal": "Top 5" },
+            { "event": "Solheim Cup", "country": "EUR 🇪🇺", "distance": "Team", "date": "Sep 2026", "prize": "N/A", "goal": "Anchor Pick" },
+            { "event": "LPGA Tour Final", "country": "UAE 🇦🇪", "distance": "Season End", "date": "Nov 2026", "prize": "$500,000", "goal": "No. 1 Rank" }
+        ],
+        "financialProjection": [
+            { "scenario": "Conservative", "results": "Top 10 in all majors", "earned": "$900,000", "fee": "$135,000" },
+            { "scenario": "Realistic", "results": "1 major win + top-5 finishes", "earned": "$2,500,000", "fee": "$375,000" },
+            { "scenario": "Breakthrough", "results": "2 majors + Player of Year", "earned": "$6,000,000+", "fee": "$900,000+" }
+        ],
+        "valueBenefits": [
+            { "icon": "trophy", "label": "Tournament Strategy" },
+            { "icon": "handshake", "label": "Sponsorship Deals" },
+            { "icon": "chart", "label": "Financial Growth" },
+            { "icon": "globe", "label": "Global Presence" }
+        ]
+    }
+]
