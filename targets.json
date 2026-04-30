@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "badge": "Target #1",
+        "name": "Valencia 10K",
+        "location": "Valencia, Spain",
+        "image": "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?w=400&h=260&fit=crop",
+        "date": "January 2026",
+        "prizePool": "€5,000",
+        "website": "valenciaciudaddelrunning.com",
+        "email": "elite@valenciaciudaddelrunning.com",
+        "why": "Fast course, world-class event, attracts strong international fields.",
+        "details": [
+            { "icon": "calendar", "label": "Date", "value": "January 2026" },
+            { "icon": "trophy",   "label": "Prize Pool (Top)", "value": "€5,000" },
+            { "icon": "globe",    "label": "Website", "value": "valenciaciudaddelrunning.com" },
+            { "icon": "email",    "label": "Contact Email", "value": "elite@valenciaciudaddelrunning.com" }
+        ]
+    },
+    {
+        "id": 2,
+        "badge": "Target #2",
+        "name": "Lille 10K",
+        "location": "Lille, France",
+        "image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&h=260&fit=crop",
+        "date": "March 2026",
+        "prizePool": "€2,000",
+        "website": "lille10k.fr",
+        "email": "contact@lille10k.fr",
+        "why": "Great opportunity for emerging athletes to gain international experience and results.",
+        "details": [
+            { "icon": "calendar", "label": "Date", "value": "March 2026" },
+            { "icon": "trophy",   "label": "Prize Pool (Top)", "value": "€2,000" },
+            { "icon": "globe",    "label": "Website", "value": "lille10k.fr" },
+            { "icon": "email",    "label": "Contact Email", "value": "contact@lille10k.fr" }
+        ]
+    },
+    {
+        "id": 3,
+        "badge": "Target #3",
+        "name": "Paris Half Marathon",
+        "location": "Paris, France",
+        "image": "https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?w=400&h=260&fit=crop",
+        "date": "March 2026",
+        "prizePool": "€8,000",
+        "website": "harmonsemiparis.com",
+        "email": "elite@harmonsemiparis.com",
+        "why": "High profile event with strong competition and global visibility.",
+        "details": [
+            { "icon": "calendar", "label": "Date", "value": "March 2026" },
+            { "icon": "trophy",   "label": "Prize Pool (Top)", "value": "€8,000" },
+            { "icon": "globe",    "label": "Website", "value": "harmonsemiparis.com" },
+            { "icon": "email",    "label": "Contact Email", "value": "elite@harmonsemiparis.com" }
+        ]
+    }
+]
