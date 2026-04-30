@@ -429,9 +429,6 @@ h1, h2, h3, h4 {
     background: var(--clr-gold);
     border-radius: 50%;
 }
-/* ------------------------------------------------------------
-   9. FEATURED CAROUSEL
-   ------------------------------------------------------------ */
 .featured-section {
     background: var(--clr-bg-2);
     overflow: hidden;
@@ -492,9 +489,6 @@ h1, h2, h3, h4 {
     margin-bottom: 10px;
 }
 
-/* ------------------------------------------------------------
-   10. ATHLETES GRID — ASYMMETRIC PREMIUM LAYOUT
-   ------------------------------------------------------------ */
 .athletes-section { background: var(--clr-bg); }
 
 .athletes-grid {
@@ -504,7 +498,6 @@ h1, h2, h3, h4 {
     gap: 16px;
 }
 
-/* First card — larger, spanning 2 rows */
 .athlete-card:first-child {
     grid-row: span 2;
 }
