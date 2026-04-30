@@ -291,9 +291,6 @@ h1, h2, h3, h4 {
     transform: translateY(-2px);
     box-shadow: 0 16px 40px rgba(201, 168, 76, 0.2);
 }
-/* ------------------------------------------------------------
-   7. ABOUT
-   ------------------------------------------------------------ */
 .about-section {
     background: var(--clr-bg-2);
 }
@@ -328,7 +325,6 @@ h1, h2, h3, h4 {
     font-weight: 300;
 }
 
-/* Elegant stat blocks */
 .about-stats {
     display: flex;
     flex-direction: column;
@@ -352,9 +348,6 @@ h1, h2, h3, h4 {
     line-height: 1;
 }
 
-/* ------------------------------------------------------------
-   8. SERVICES
-   ------------------------------------------------------------ */
 .services-section { background: var(--clr-bg); }
 
 .services-grid {
