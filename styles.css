@@ -879,3 +879,93 @@ h1, h2, h3, h4 {
     .hero-actions { flex-direction: column; align-items: flex-start; }
     .featured-track { min-height: 380px; }
 }
+
+/* ============================================================
+   OUTREACH TARGETS SECTION
+   Reference: right panel of brand document — card per target
+   ============================================================ */
+.targets-section {
+    background: var(--clr-bg-2);
+}
+
+/* Stacked list of target cards */
+.targets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+/* ---- Individual target card ---- */
+.target-card {
+    background: var(--clr-card);
+    border: 0.5px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.target-card:hover {
+    border-color: var(--clr-border-gold);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.45), 0 0 40px rgba(201,168,76,0.05);
+}
+
+.target-img {
+    position: relative;
+    overflow: hidden;
+    background: var(--clr-surface);
+}
+
+.target-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.8);
+    transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+.target-name {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--clr-text);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.target-badge {
+    flex-shrink: 0;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--clr-bg);
+    background: var(--clr-gold);
+    padding: 5px 12px;
+    border-radius: 2px;
+}
+
+/* ------------------------------------------------------------
+   15. RESPONSIVE
+   ------------------------------------------------------------ */
+@media (max-width: 1100px) {
+    .athletes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 380px;
+    }
+    .athlete-card:first-child { grid-row: span 1; }
+}
+
+@media (max-width: 768px) {
+    .primary-nav { display: none; }
+    .menu-btn { display: flex; }
+    .mobile-menu { display: block; }
+
+    .hero-headline { font-size: clamp(3.5rem, 14vw, 5.5rem); }
+    
+    .target-card {
+        grid-template-columns: 1fr;
+    }
+}
