@@ -723,7 +723,6 @@ h1, h2, h3, h4 {
 }
 .form-success-sub strong { color: var(--clr-gold); font-weight: 600; }
 
-/* Validation error notice */
 .form-error {
     font-size: 0.78rem;
     color: #e07b5a;
@@ -734,7 +733,6 @@ h1, h2, h3, h4 {
     letter-spacing: 0.02em;
 }
 
-/* Direct email link in contact panel */
 .contact-email-link {
     color: var(--clr-text-2);
     transition: color 0.2s ease;
@@ -746,9 +744,6 @@ h1, h2, h3, h4 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ------------------------------------------------------------
-   13. FOOTER
-   ------------------------------------------------------------ */
 .site-footer {
     background: var(--clr-bg-2);
     border-top: 0.5px solid rgba(201, 168, 76, 0.1);
@@ -798,9 +793,6 @@ h1, h2, h3, h4 {
 .footer-copy { text-align: right; }
 .footer-copy p { font-size: 0.7rem; color: var(--clr-text-3); }
 
-/* ------------------------------------------------------------
-   14. ACCESSIBILITY & MOTION
-   ------------------------------------------------------------ */
 .skip-link {
     position: fixed;
     top: -100%;
@@ -832,9 +824,6 @@ h1, h2, h3, h4 {
     [data-aos] { opacity: 1 !important; transform: none !important; }
 }
 
-/* ------------------------------------------------------------
-   15. RESPONSIVE
-   ------------------------------------------------------------ */
 @media (max-width: 1100px) {
     .athletes-grid {
         grid-template-columns: repeat(2, 1fr);
