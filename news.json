@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Marcus Thorne Signs Six-Year Extension Worth $340 Million",
+        "date": "2026-02-10",
+        "category": "Contract",
+        "description": "The largest guaranteed contract in league history secures Thorne's future with the franchise through 2032."
+    },
+    {
+        "id": 2,
+        "title": "Elena Vance Advances to Australian Open Final",
+        "date": "2026-01-28",
+        "category": "Results",
+        "description": "A dominant straight-sets victory in the semifinals earns Vance her second consecutive Australian Open final appearance."
+    },
+    {
+        "id": 3,
+        "title": "Jordan Rivers Named NBA All-Star Game Captain",
+        "date": "2026-01-20",
+        "category": "Recognition",
+        "description": "Rivers receives his fifth All-Star selection and is voted by fans as Western Conference captain."
+    },
+    {
+        "id": 4,
+        "title": "LionStride Opens New Office in London",
+        "date": "2026-01-15",
+        "category": "Agency News",
+        "description": "Expanding our global footprint with a new European headquarters to better serve athletes and partners across the continent."
+    },
+    {
+        "id": 5,
+        "title": "Sarah Jenkins Breaks 200m World Record in Tokyo",
+        "date": "2026-02-05",
+        "category": "Results",
+        "description": "Jenkins shatters the long-standing world record with a stunning 21.34-second sprint at the Tokyo Invitational."
+    },
+    {
+        "id": 6,
+        "title": "Leo Sterling Wins Premier League Player of the Month",
+        "date": "2026-01-30",
+        "category": "Recognition",
+        "description": "Three goals and four assists in January earn Sterling his first Player of the Month award this season."
+    }
+]
