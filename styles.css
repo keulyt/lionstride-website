@@ -880,15 +880,9 @@ h1, h2, h3, h4 {
     .featured-track { min-height: 380px; }
 }
 
-/* ============================================================
-   OUTREACH TARGETS SECTION
-   Reference: right panel of brand document — card per target
-   ============================================================ */
 .targets-section {
     background: var(--clr-bg-2);
 }
-
-/* Stacked list of target cards */
 .targets-list {
     display: flex;
     flex-direction: column;
@@ -896,7 +890,6 @@ h1, h2, h3, h4 {
     margin-bottom: 28px;
 }
 
-/* ---- Individual target card ---- */
 .target-card {
     background: var(--clr-card);
     border: 0.5px solid var(--clr-border);
@@ -947,9 +940,6 @@ h1, h2, h3, h4 {
     border-radius: 2px;
 }
 
-/* ------------------------------------------------------------
-   15. RESPONSIVE
-   ------------------------------------------------------------ */
 @media (max-width: 1100px) {
     .athletes-grid {
         grid-template-columns: repeat(2, 1fr);
