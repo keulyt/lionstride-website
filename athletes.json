@@ -27,7 +27,7 @@
             { "scenario": "Breakthrough", "results": "Super Bowl MVP", "earned": "$1,200,000+", "fee": "$180,000+" }
         ],
         "valueBenefits": [
-            { "icon": "trophy", "label": "Contract Negotiation" },
+            { "icon": "plane", "label": "Contract Negotiation" },
             { "icon": "handshake", "label": "Endorsement Deals" },
             { "icon": "chart", "label": "Career Planning" },
             { "icon": "globe", "label": "Global Exposure" }
@@ -163,7 +163,7 @@
             { "scenario": "Breakthrough", "results": "Ballon d'Or candidate", "earned": "£20,000,000+", "fee": "£3,000,000+" }
         ],
         "valueBenefits": [
-            { "icon": "trophy", "label": "Contract Negotiation" },
+            { "icon": "plane", "label": "Contract Negotiation" },
             { "icon": "handshake", "label": "Endorsement Deals" },
             { "icon": "chart", "label": "Wealth Management" },
             { "icon": "globe", "label": "Global Branding" }
@@ -197,7 +197,7 @@
             { "scenario": "Breakthrough", "results": "2 majors + Player of Year", "earned": "$6,000,000+", "fee": "$900,000+" }
         ],
         "valueBenefits": [
-            { "icon": "trophy", "label": "Tournament Strategy" },
+            { "icon": "plane", "label": "Tournament Strategy" },
             { "icon": "handshake", "label": "Sponsorship Deals" },
             { "icon": "chart", "label": "Financial Growth" },
             { "icon": "globe", "label": "Global Presence" }
