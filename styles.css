@@ -231,6 +231,7 @@ h1, h2, h3, h4 {
 
 
 .wordmark {
+     display: flex;
     font-family: var(--font-display);
     font-size: 1.3rem;
     font-weight: 500;
@@ -238,7 +239,13 @@ h1, h2, h3, h4 {
 }
 .wordmark-lion { color: var(--clr-text); }
 .wordmark-stride { color: var(--clr-gold); }
-
+       .logo-icon-img {
+    width: 40px;       
+    height: 40px;
+    margin-right: 10px;
+    object-fit: contain;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.5));
+}
 .nav-list {
     display: flex;
     align-items: center;
