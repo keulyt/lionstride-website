@@ -239,7 +239,7 @@ h1, h2, h3, h4 {
 }
 .wordmark-lion { color: var(--clr-text); }
 .wordmark-stride { color: var(--clr-gold); }
-       .logo-icon-img {
+.logo-icon-img {
     width: 40px;       
     height: 40px;
     margin-right: 10px;
