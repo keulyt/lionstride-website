@@ -166,7 +166,7 @@ function initFeaturedCarousel() {
                     <div class="featured-tag">Featured Athlete</div>
                     <h3 class="featured-name">${a.name}</h3>
                     <div class="featured-sport">${a.sport}</div>
-                    <p class="featured-desc">${a.description}</p>
+                   
                     <a href="#contact" class="featured-link">
                         Inquire About Representation
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -430,7 +430,7 @@ async function fetchJSON(url) {
 
 async function fetchAthletes() {
     try {
-        const res = await fetch('athletes.json');
+        const res = await fetch('scroll.json');
         if (!res.ok) throw new Error('Failed');
         return res.json();
     } catch {
