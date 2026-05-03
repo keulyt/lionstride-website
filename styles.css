@@ -1638,21 +1638,19 @@ contact-section { background: var(--clr-bg); }
     .target-detail-row { flex-wrap: wrap; }
 }
 
-/* ============================================================
-   STORIES SECTION
-   ============================================================ */
+
 .stories-section {
     background: var(--clr-bg);
 }
 
-/* Card grid — 3 columns, collapses responsively */
+
 .stories-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
-/* Story Card */
+
 .story-card {
     background: var(--clr-card);
     border: 0.5px solid var(--clr-border);
@@ -1674,10 +1672,10 @@ contact-section { background: var(--clr-bg); }
         0 0 40px rgba(201, 168, 76, 0.06);
 }
 
-/* Card featured image */
+
 .story-card-img {
     width: 100%;
-    /* aspect-ratio: 16 / 9; */
+ 
     object-fit: contain;
     overflow: hidden;
     background: var(--clr-surface);
@@ -1695,7 +1693,7 @@ contact-section { background: var(--clr-bg); }
     filter: saturate(1);
 }
 
-/* Placeholder shown when image is missing */
+
 .story-img-placeholder {
     width: 100%;
     height: 100%;
@@ -1706,7 +1704,7 @@ contact-section { background: var(--clr-bg); }
     color: var(--clr-text-3);
 }
 
-/* Card body */
+
 .story-card-body {
     padding: 24px;
     display: flex;
@@ -1758,14 +1756,14 @@ contact-section { background: var(--clr-bg); }
     line-height: 1.7;
     font-weight: 300;
     flex: 1;
-    /* Clamp to 3 lines */
+ 
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-/* "Read More" button inside card */
+
 .story-card-btn {
     display: inline-flex;
     align-items: center;
@@ -1785,9 +1783,7 @@ contact-section { background: var(--clr-bg); }
 }
 .story-card-btn:hover { gap: 12px; }
 
-/* ============================================================
-   STORY MODAL
-   ============================================================ */
+
 .story-modal-overlay {
     position: fixed;
     inset: 0;
@@ -1799,7 +1795,7 @@ contact-section { background: var(--clr-bg); }
     align-items: center;
     justify-content: center;
     padding: 24px;
-    /* Hidden state */
+  
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s var(--ease-out);
@@ -1809,7 +1805,7 @@ contact-section { background: var(--clr-bg); }
     pointer-events: auto;
 }
 
-/* Modal box */
+
 .story-modal {
     background: var(--clr-card);
     border: 0.5px solid var(--clr-border-gold);
@@ -1819,10 +1815,10 @@ contact-section { background: var(--clr-bg); }
     max-height: 88vh;
     overflow-y: auto;
     position: relative;
-    /* Slide-up + scale on open */
+  
     transform: translateY(20px) scale(0.97);
     transition: transform 0.4s var(--ease-out);
-    /* Scrollbar styling */
+  
     scrollbar-width: thin;
     scrollbar-color: var(--clr-card) transparent;
 }
@@ -1830,7 +1826,7 @@ contact-section { background: var(--clr-bg); }
     transform: translateY(0) scale(1);
 }
 
-/* Close button */
+
 .story-modal-close {
     position: sticky;
     top: 0;
@@ -1855,14 +1851,14 @@ contact-section { background: var(--clr-bg); }
     background: var(--clr-gold-dim);
 }
 
-/* Modal image */
+
 .story-modal-img-wrap {
     width: 100%;
-    /* aspect-ratio: 16 / 7; */
+ 
     object-fit: contain;
     overflow: hidden;
     background: var(--clr-surface);
-    margin-top: -52px; /* Slides under the close button row */
+    margin-top: -52px; 
 }
 .story-modal-img {
     width: 100%;
@@ -1923,9 +1919,6 @@ contact-section { background: var(--clr-bg); }
     line-height: 1.85;
 }
 
-/* ============================================================
-   STORIES RESPONSIVE
-   ============================================================ */
 @media (max-width: 1024px) {
     .stories-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1935,5 +1928,5 @@ contact-section { background: var(--clr-bg); }
     .story-modal-img-wrap { aspect-ratio: 16 / 9; margin-top: -44px; }
 }
 
-/* Prevent body scroll when modal is open */
+
 body.modal-open { overflow: hidden; }
