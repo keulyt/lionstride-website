@@ -424,6 +424,129 @@ function initContactForm() {
     });
 }
 
+
+
+async function loadStories(container) {
+    try {
+        const stories = await fetchJSON('stories.json');
+        container.innerHTML = '';
+
+        stories.forEach((story, i) => {
+            const card = document.createElement('article');
+            card.className = 'story-card';
+            card.setAttribute('data-aos', 'fade-up');
+            card.setAttribute('data-aos-delay', String(i * 100));
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', `Read article: ${story.title}`);
+
+          
+            const dateStr = formatDate(story.date);
+
+           
+            const imgHtml = story.image
+                ? `<img src="${story.image}" alt="${story.title}" loading="lazy">`
+                : `<div class="story-img-placeholder" aria-hidden="true">
+                       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3">
+                           <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+                           <polyline points="21 15 16 10 5 21"/>
+                       </svg>
+                   </div>`;
+
+            card.innerHTML = `
+                <div class="story-card-img">${imgHtml}</div>
+                <div class="story-card-body">
+                    <div class="story-card-meta">
+                        <span class="story-card-cat">${story.category}</span>
+                        <span class="story-card-date">${dateStr}</span>
+                    </div>
+                    <h3 class="story-card-title">${story.title}</h3>
+                    <p class="story-card-preview">${story.preview}</p>
+                    <button class="story-card-btn" aria-label="Read full article: ${story.title}">
+                        Read Article
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            `;
+
+           
+            const openModal = () => showStoryModal(story);
+            card.addEventListener('click', openModal);
+            card.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
+            });
+
+            container.appendChild(card);
+        });
+
+    } catch (err) {
+        console.warn('Could not load stories:', err);
+        container.innerHTML = '<p class="placeholder-text">Stories coming soon.</p>';
+    }
+}
+
+
+(function initStoryModal() {
+    const overlay   = document.getElementById('story-modal-overlay');
+    const closeBtn  = document.getElementById('story-modal-close');
+    if (!overlay || !closeBtn) return;
+
+   
+    window.showStoryModal = function(story) {
+      
+        const img = document.getElementById('modal-img');
+        if (story.image) {
+            img.src = story.image;
+            img.alt = story.title;
+            img.style.display = 'block';
+            overlay.querySelector('.story-modal-img-wrap').style.display = 'block';
+        } else {
+            overlay.querySelector('.story-modal-img-wrap').style.display = 'none';
+        }
+
+        
+        document.getElementById('modal-cat').textContent  = story.category;
+        document.getElementById('modal-date').textContent = formatDate(story.date);
+
+     
+        document.getElementById('modal-title').textContent = story.title;
+
+       
+        document.getElementById('modal-content').innerHTML =
+            (story.content || []).map(para => `<p>${para}</p>`).join('');
+
+       
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+
+       
+        setTimeout(() => closeBtn.focus(), 50);
+    };
+
+   
+    function closeModal() {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+       
+        overlay.querySelector('.story-modal').scrollTop = 0;
+    }
+
+
+    closeBtn.addEventListener('click', closeModal);
+
+
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay) closeModal();
+    });
+
+  
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+    });
+})();
 async function fetchJSON(url) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Failed to fetch ${url}`);
