@@ -426,9 +426,29 @@
             </div>
         </div>
     </footer>
-
-   
+<div class="story-modal-overlay" id="story-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="story-modal">
+            <button class="story-modal-close" id="story-modal-close" aria-label="Close article">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="story-modal-img-wrap">
+                <img class="story-modal-img" id="modal-img" src="" alt="">
+            </div>
+            <div class="story-modal-body">
+                <div class="story-modal-meta">
+                    <span class="story-modal-cat" id="modal-cat"></span>
+                    <span class="story-modal-date" id="modal-date"></span>
+                </div>
+                <h2 class="story-modal-title" id="modal-title"></h2>
+                <div class="story-modal-content" id="modal-content"></div>
+            </div>
+        </div>
+    </div>
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js" defer></script>
 </body>
 
