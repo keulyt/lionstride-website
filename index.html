@@ -20,11 +20,17 @@
    <link rel="stylesheet" href="styles.css">
 </head>
 
+
 <body>
 
+    <!-- Skip Link -->
     <a href="#main" class="skip-link">Skip to content</a>
 
-  <header class="site-header" id="site-header">
+    <!-- ================================================================
+         HEADER
+         ================================================================ -->
+    
+    <header class="site-header" id="site-header">
         <div class="header-inner">
             <a href="#home" class="wordmark" aria-label="LionStride Management home">
                  <img src="assets/logo_icon.png" alt="LionStride Logo" class="logo-icon-img">
@@ -66,8 +72,12 @@
         </div>
     </header>
 
+
     <main id="main">
 
+        <!-- ================================================================
+             HERO
+             ================================================================ -->
         <section class="hero" id="home" aria-label="Hero">
             <div class="hero-bg" aria-hidden="true">
                 <div class="hero-grid parallax-layer" data-parallax-speed="0.4"></div>
@@ -98,10 +108,18 @@
                 </div>
             </div>
 
+            <!-- <div class="scroll-hint" aria-hidden="true">
+                <span class="scroll-hint-line"></span>
+                <span class="scroll-hint-text">Scroll</span>
+            </div> -->
         </section>
 
+        <!-- Section Separator -->
         <div class="section-sep"></div>
 
+        <!-- ================================================================
+             ABOUT
+             ================================================================ -->
         <section class="section about-section" id="about" aria-labelledby="about-heading">
             <div class="section-inner">
                 <div class="about-grid">
@@ -137,8 +155,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section Separator -->
         <div class="section-sep"></div>
 
+        <!-- ================================================================
+             SERVICES
+             ================================================================ -->
         <section class="section services-section" id="services" aria-labelledby="services-heading">
             <div class="section-inner">
                 <div class="section-header" data-aos="fade-up">
@@ -148,6 +171,7 @@
                 </div>
 
                 <div class="services-grid">
+                    <!-- Service 1 -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="0">
                         <span class="service-num">01</span>
                         <div class="service-icon" aria-hidden="true">
@@ -164,6 +188,7 @@
                         </ul>
                     </div>
 
+                    <!-- Service 2 -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                         <span class="service-num">02</span>
                         <div class="service-icon" aria-hidden="true">
@@ -180,6 +205,7 @@
                         </ul>
                     </div>
 
+                    <!-- Service 3 -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                         <span class="service-num">03</span>
                         <div class="service-icon" aria-hidden="true">
@@ -199,8 +225,12 @@
             </div>
         </section>
 
+        <!-- Section Separator -->
         <div class="section-sep"></div>
 
+        <!-- ================================================================
+             FEATURED CAROUSEL
+             ================================================================ -->
         <section class="section featured-section" id="featured" aria-labelledby="featured-heading">
             <div class="section-inner">
                 <div class="section-header" data-aos="fade-up">
@@ -209,14 +239,14 @@
                 </div>
 
                 <div class="featured-track" id="featured-track">
-                    
+                    <!-- Rendered by script.js -->
                 </div>
 
                 <div class="featured-controls">
                     <button class="ctrl-btn" id="ctrl-prev" aria-label="Previous athlete">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
                     </button>
-                    <div class="ctrl-dots" id="ctrl-dots"></div>
+                    <div class="ctrl-dots" id="ctrl-dots"><!-- Rendered by script.js --></div>
                     <button class="ctrl-btn" id="ctrl-next" aria-label="Next athlete">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
                     </button>
@@ -224,8 +254,12 @@
             </div>
         </section>
 
+        <!-- Section Separator -->
         <div class="section-sep"></div>
 
+        <!-- ================================================================
+             ATHLETES GRID
+             ================================================================ -->
         <section class="section athletes-section" id="athletes" aria-labelledby="athletes-heading">
             <div class="section-inner">
                 <div class="section-header" data-aos="fade-up">
@@ -235,12 +269,17 @@
                 </div>
 
                 <div class="athletes-grid" id="athletes-grid">
+                    <!-- Loaded dynamically from athletes.json — each card links to athlete.html?id={slug} -->
                 </div>
             </div>
         </section>
 
+        <!-- Section Separator -->
         <div class="section-sep"></div>
 
+        <!-- ================================================================
+             OUTREACH TARGETS
+             ================================================================ -->
         <section class="section targets-section" id="targets" aria-labelledby="targets-heading">
             <div class="section-inner">
                 <div class="section-header" data-aos="fade-up">
@@ -249,8 +288,10 @@
                     <p class="section-sub">Priority race events and partnerships we are actively pursuing for our athletes.</p>
                 </div>
 
+                <!-- Target cards rendered by script.js from targets.json -->
                 <div class="targets-list" id="targets-list"></div>
 
+                <!-- Our goal callout — mirrors reference image bottom panel -->
                 <div class="targets-goal" data-aos="fade-up">
                     <div class="targets-goal-icon" aria-hidden="true">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -264,8 +305,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section Separator -->
         <div class="section-sep"></div>
 
+        <!-- ================================================================
+             NEWS
+             ================================================================ -->
         <section class="section news-section" id="news" aria-labelledby="news-heading">
             <div class="section-inner">
                 <div class="section-header" data-aos="fade-up">
@@ -275,24 +321,33 @@
                 </div>
 
                 <div class="news-grid" id="news-grid">
+                    <!-- Loaded dynamically from news.json -->
                 </div>
             </div>
         </section>
 
- <section class="section stories-section" id="stories" aria-labelledby="stories-heading">
+          <!-- ================================================================
+             STORIES
+             ================================================================ -->
+        <section class="section stories-section" id="stories" aria-labelledby="stories-heading">
             <div class="section-inner">
                 <div class="section-header" data-aos="fade-up">
                     <div class="eyebrow">Community</div>
                     <h2 class="section-heading" id="stories-heading">Stories</h2>
                     <p class="section-sub">Real journeys from the athletes and people behind LionStride.</p>
                 </div>
-              
+                <!-- Story cards rendered by script.js from stories.json -->
                 <div class="stories-grid" id="stories-grid"></div>
             </div>
         </section>
 
+     <!-- Section Separator -->
+        <!-- Section Separator -->
         <div class="section-sep"></div>
 
+        <!-- ================================================================
+             CONTACT
+             ================================================================ -->
         <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
             <div class="section-inner">
                 <div class="contact-grid">
@@ -323,7 +378,14 @@
                     </div>
 
                     <div class="contact-right" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
-                     
+                        <!--
+                            CONTACT FORM — EmailJS implementation
+                            Static / GitHub Pages compatible — no backend required.
+                            EmailJS sends directly to contact@lionstridemanagement.com
+                            Public Key : LiKI0xIHSb_uPH3GS
+                            Service ID : service_i2ymauu
+                            Template ID: template_c0gshgw
+                        -->
                         <form id="contact-form" class="contact-form" novalidate>
 
                             <div class="field-row">
@@ -373,7 +435,7 @@
                                           required></textarea>
                             </div>
 
-                          
+                            <!-- Validation error notice -->
                             <p id="form-error" class="form-error" aria-live="polite" hidden>
                                 Please fill in all fields before sending.
                             </p>
@@ -383,7 +445,7 @@
                                 <span id="submit-label">Send Message</span>
                             </button>
 
-                           
+                            <!-- Success notice — shown after EmailJS confirms delivery -->
                             <div id="form-success" class="form-success" aria-live="polite" hidden>
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                                 <div>
@@ -392,7 +454,7 @@
                                 </div>
                             </div>
 
-                           
+                            <!-- Error notice — shown if EmailJS fails -->
                             <div id="form-send-error" class="form-send-error" aria-live="polite" hidden>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                                 <p>Something went wrong. Please email us directly at <a href="mailto:contact@lionstridemanagement.com">contact@lionstridemanagement.com</a></p>
@@ -405,11 +467,13 @@
         </section>
 
     </main>
-
-   <footer class="site-footer">
+    <!-- ================================================================
+         FOOTER
+         ================================================================ -->
+    <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-brand">
-                <a href="#home" class="footer-wordmark">
+                 <a href="#home" class="footer-wordmark">
                    <img src="assets/logo_icon.png" alt="LionStride Logo" class="logo-icon-img">Lion<span class="accent">Stride</span>
                 </a>
                 <p class="footer-tagline">Developing Endurance Talent Globally.</p>
@@ -429,7 +493,12 @@
             </div>
         </div>
     </footer>
-<div class="story-modal-overlay" id="story-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+
+
+    <!-- ================================================================
+         STORY MODAL — rendered by script.js, toggled on card click
+         ================================================================ -->
+    <div class="story-modal-overlay" id="story-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
         <div class="story-modal">
             <button class="story-modal-close" id="story-modal-close" aria-label="Close article">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">

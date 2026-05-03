@@ -1,3 +1,15 @@
+/* ===========================================================
+   LIONSTRIDE MANAGEMENT — Main JavaScript v2
+   Refined: Tags, carousel, asymmetric grid support
+   -----------------------------------------------------------
+   1. Init
+   2. Navigation
+   3. Sticky Header
+   4. Featured Carousel
+   5. Dynamic Content (athletes + news)
+   6. Contact Form
+   7. Utilities
+   =========================================================== */
 
 document.addEventListener('DOMContentLoaded', init);
 
@@ -6,11 +18,16 @@ function init() {
     initAOS();
     initNav();
     initStickyHeader();
-    initParallax();     
+    initParallax();      // Scroll-driven parallax for hero + athlete images
     initFeaturedCarousel();
     loadDynamicContent();
     initContactForm();
 }
+
+/* ===========================================================
+   1. PARALLAX — Hero Backgrounds & Athlete Images
+   Uses requestAnimationFrame for 60fps performance.
+   =========================================================== */
 function initParallax() {
     const layers      = document.querySelectorAll('.parallax-layer');
     const athleteImgs = document.querySelectorAll('.athlete-img img');
@@ -23,21 +40,26 @@ function initParallax() {
         const scrollY = window.scrollY;
         const vh      = window.innerHeight;
 
+        // ---- Hero parallax: layers move at different speeds relative to scroll ----
         layers.forEach(el => {
             const speed = parseFloat(el.dataset.parallaxSpeed) || 0.3;
+            // Only apply while hero is on screen
             const inHero = scrollY < heroTop + heroHeight;
             if (!inHero) return;
             const yOffset = (scrollY - heroTop) * speed;
             el.style.transform = `translate3d(0, ${yOffset}px, 0)`;
         });
 
+        // ---- Athlete image parallax: shift as cards move through viewport ----
+        // Uses CSS custom property so it composes with hover scale
         athleteImgs.forEach(img => {
             const card = img.closest('.athlete-card');
             if (!card) return;
             const rect       = card.getBoundingClientRect();
             const cardCenter = rect.top + rect.height / 2;
             const vhCenter   = vh / 2;
-             const offset = Math.max(-12, Math.min(12, (vhCenter - cardCenter) * 0.06));
+            // Subtle vertical shift (max ±12px) — composes with hover scale via CSS var
+            const offset = Math.max(-12, Math.min(12, (vhCenter - cardCenter) * 0.06));
             img.style.setProperty('--parallax-y', `${offset}px`);
         });
 
@@ -54,6 +76,10 @@ function initParallax() {
     // Run once on load
     update();
 }
+
+/* ===========================================================
+   2. AOS
+   =========================================================== */
 function initAOS() {
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -64,6 +90,10 @@ function initAOS() {
         });
     }
 }
+
+/* ===========================================================
+   2. NAVIGATION
+   =========================================================== */
 function initNav() {
     const menuBtn    = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -98,6 +128,7 @@ function initNav() {
         });
     }
 
+    // Active link tracking on scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -114,6 +145,10 @@ function initNav() {
 
     sections.forEach(section => observer.observe(section));
 }
+
+/* ===========================================================
+   3. STICKY HEADER
+   =========================================================== */
 function initStickyHeader() {
     const header = document.getElementById('site-header');
     if (!header) return;
@@ -129,6 +164,10 @@ function initStickyHeader() {
         }
     }, { passive: true });
 }
+
+/* ===========================================================
+   4. FEATURED CAROUSEL
+   =========================================================== */
 function initFeaturedCarousel() {
     const track   = document.getElementById('featured-track');
     const dots    = document.getElementById('ctrl-dots');
@@ -166,7 +205,7 @@ function initFeaturedCarousel() {
                     <div class="featured-tag">Featured Athlete</div>
                     <h3 class="featured-name">${a.name}</h3>
                     <div class="featured-sport">${a.sport}</div>
-                   
+                    
                     <a href="#contact" class="featured-link">
                         Inquire About Representation
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -216,21 +255,27 @@ function initFeaturedCarousel() {
         track.addEventListener('mouseleave', startTimer);
     }
 }
+
+/* ===========================================================
+   5. DYNAMIC CONTENT
+   =========================================================== */
 async function loadDynamicContent() {
     const athletesGrid = document.getElementById('athletes-grid');
     const newsGrid      = document.getElementById('news-grid');
     const targetsList   = document.getElementById('targets-list');
-    const storiesGrid   = document.getElementById('stories-grid');
+     const storiesGrid   = document.getElementById('stories-grid');
 
     await Promise.allSettled([
         athletesGrid ? loadAthletes(athletesGrid)   : Promise.resolve(),
         newsGrid      ? loadNews(newsGrid)           : Promise.resolve(),
         targetsList   ? loadTargets(targetsList)     : Promise.resolve(),
-         storiesGrid   ? loadStories(storiesGrid)    : Promise.resolve(),
+        storiesGrid   ? loadStories(storiesGrid)    : Promise.resolve(),
     ]);
 
     if (typeof AOS !== 'undefined') AOS.refresh();
 }
+
+/* ---- Athletes Grid ---- */
 async function loadAthletes(container) {
     try {
         const athletes = await fetchJSON('athletes.json');
@@ -242,7 +287,8 @@ async function loadAthletes(container) {
             card.setAttribute('data-aos', 'fade-up');
             card.setAttribute('data-aos-delay', String(i * 80));
 
-             const tagsHtml = (a.tags || []).map(tag => {
+            // Championship/achievement tag icons
+            const tagsHtml = (a.tags || []).map(tag => {
                 const isAward = tag.includes('Champ') || tag.includes('Gold') || tag.includes('Major') || tag.includes('MVP') || tag.includes('Record') || tag.includes('Winner');
                 return `<span class="athlete-tag">${isAward ? laurelSvg : ''}<span>${tag}</span></span>`;
             }).join('');
@@ -272,10 +318,14 @@ async function loadAthletes(container) {
         container.innerHTML = '<p class="placeholder-text">Athlete data unavailable.</p>';
     }
 }
+
+/* Small SVG laurel wreath icon for championship tags */
 const laurelSvg = `<svg class="tag-icon" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M6 13C6 13 2 10 2 6C2 4 3 2 6 1C3 2 2 4 2 6C2 10 6 13 6 13Z" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/>
     <path d="M6 13C6 13 10 10 10 6C10 4 9 2 6 1C9 2 10 4 10 6C10 10 6 13 6 13Z" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/>
 </svg>`;
+
+/* ---- Outreach Targets ---- */
 async function loadTargets(container) {
     try {
         const targets = await fetchJSON('targets.json');
@@ -287,6 +337,7 @@ async function loadTargets(container) {
             card.setAttribute('data-aos', 'fade-up');
             card.setAttribute('data-aos-delay', String(i * 100));
 
+            // Build detail rows with inline SVG icons
             const detailsHtml = (t.details || []).map(d => `
                 <div class="target-detail-row">
                     <span class="target-detail-icon" aria-hidden="true">${targetIcon(d.icon)}</span>
@@ -333,6 +384,8 @@ function targetIcon(name) {
     };
     return icons[name] || icons.globe;
 }
+
+/* ---- News Grid ---- */
 async function loadNews(container) {
     try {
         const articles = await fetchJSON('news.json');
@@ -366,66 +419,133 @@ async function loadNews(container) {
         container.innerHTML = '<p class="placeholder-text">News data unavailable.</p>';
     }
 }
+
+/* ===========================================================
+   6. CONTACT FORM — EmailJS implementation
+   Sends directly to contact@lionstridemanagement.com.
+   No backend required. Works on static / GitHub Pages.
+
+   Credentials:
+     Public Key  : LiKI0xIHSb_uPH3GS
+     Service ID  : service_i2ymauu
+     Template ID : template_c0gshgw
+
+   EmailJS template variables used:
+     {{from_name}}    — sender's full name
+     {{from_email}}   — sender's email address
+     {{subject}}      — selected topic
+     {{message}}      — message body
+     {{reply_to}}     — set to sender's email for easy reply
+   =========================================================== */
 function initContactForm() {
-    const RECIPIENT = 'contact@lionstridemanagement.com';
 
-    const form      = document.getElementById('contact-form');
-    const btn       = document.getElementById('submit-btn');
-    const successEl = document.getElementById('form-success');
-    const errorEl   = document.getElementById('form-error');
-    if (!form || !btn || !successEl) return;
+    /* --- EmailJS credentials --- */
+    const EMAILJS_PUBLIC_KEY  = 'LiKI0xIHSb_uPH3GS';
+    const EMAILJS_SERVICE_ID  = 'service_i2ymauu';
+    const EMAILJS_TEMPLATE_ID = 'template_c0gshgw';
 
-    form.addEventListener('submit', e => {
+    /* --- DOM refs --- */
+    const form        = document.getElementById('contact-form');
+    const btn         = document.getElementById('submit-btn');
+    const submitLabel = document.getElementById('submit-label');
+    const successEl   = document.getElementById('form-success');
+    const validErrEl  = document.getElementById('form-error');
+    const sendErrEl   = document.getElementById('form-send-error');
+    
+    if (!form || !btn) return;
+
+    /* --- Initialise EmailJS with the public key --- */
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    } else {
+        console.warn('EmailJS SDK not loaded. Ensure the script tag is in your HTML.');
+    }
+
+    /* --- Submit handler --- */
+    form.addEventListener('submit', async e => {
         e.preventDefault();
 
-        const name    = form.querySelector('#name').value.trim();
-        const email   = form.querySelector('#email').value.trim();
-        const subject = form.querySelector('#subject').value.trim();
-        const message = form.querySelector('#message').value.trim();
+        /* Collect values */
+        const name    = document.getElementById('name').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-         if (!name || !email || !subject || !message) {
-            if (errorEl) errorEl.hidden = false;
+        /* Client-side validation */
+        if (!name || !email || !subject || !message) {
+            if (validErrEl) {
+                validErrEl.hidden = false;
+                setTimeout(() => { validErrEl.hidden = true; }, 5000);
+            }
             return;
         }
-        if (errorEl) errorEl.hidden = true;
+        
+        if (validErrEl) validErrEl.hidden = true;
+        if (sendErrEl)  sendErrEl.hidden  = true;
 
-         const body = [
-            'MESSAGE FROM WEBSITE',
-            '─────────────────────────────',
-            '',
-            `Name:     ${name}`,
-            `Email:    ${email}`,
-            `Subject:  ${subject}`,
-            '',
-            'Message:',
-            message,
-            '',
-            '─────────────────────────────',
-            'Sent via LionStride Management website',
-        ].join('\n');
+        /* Loading state */
+        btn.disabled      = true;
+        submitLabel.textContent = 'Sending…';
 
-        const mailtoSubject = encodeURIComponent(`Message from website — ${subject}`);
-        const mailtoBody    = encodeURIComponent(body);
-        const mailtoLink    = `mailto:${RECIPIENT}?subject=${mailtoSubject}&body=${mailtoBody}`;
+        const templateParams = {
+            from_name  : name,
+            from_email : email,
+            reply_to   : email,
+            subject    : subject,
+            message    : message,
+        };
 
-        window.location.href = mailtoLink;
+        try {
+            await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                templateParams
+            );
 
-        form.querySelectorAll('.field-row, .field-group, .btn-submit')
-            .forEach(el => { el.style.display = 'none'; });
-        successEl.hidden = false;
+            /* Show success message */
+            if (successEl) {
+                successEl.hidden = false;
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successEl.hidden = true;
+                }, 5000);
+            }
+            
+            form.reset();
 
-        form.reset();
+        } catch (err) {
+            console.error('EmailJS error:', err);
+
+            /* Show the send-error notice */
+            if (sendErrEl) {
+                sendErrEl.hidden = false;
+                
+                // Hide error message after 5 seconds
+                setTimeout(() => {
+                    sendErrEl.hidden = true;
+                }, 5000);
+            }
+        } finally {
+            /* Always restore button state after the attempt */
+            btn.disabled            = false;
+            submitLabel.textContent = 'Send Message';
+        }
     });
 
+    /* Clear validation error as user edits any field */
     form.querySelectorAll('.field-input').forEach(input => {
         input.addEventListener('input', () => {
-            if (errorEl) errorEl.hidden = true;
+            if (validErrEl) validErrEl.hidden = true;
+            if (sendErrEl)  sendErrEl.hidden  = true;
         });
     });
 }
+/* ===========================================================
+   7. STORIES — Load cards from stories.json + modal controller
+   =========================================================== */
 
-
-
+/* ---- Story Cards ---- */
 async function loadStories(container) {
     try {
         const stories = await fetchJSON('stories.json');
@@ -439,10 +559,10 @@ async function loadStories(container) {
             card.setAttribute('tabindex', '0');
             card.setAttribute('aria-label', `Read article: ${story.title}`);
 
-          
+            // Format date
             const dateStr = formatDate(story.date);
 
-           
+            // Image — show placeholder svg if no image provided
             const imgHtml = story.image
                 ? `<img src="${story.image}" alt="${story.title}" loading="lazy">`
                 : `<div class="story-img-placeholder" aria-hidden="true">
@@ -470,7 +590,7 @@ async function loadStories(container) {
                 </div>
             `;
 
-           
+            // Open modal on card click or Enter key
             const openModal = () => showStoryModal(story);
             card.addEventListener('click', openModal);
             card.addEventListener('keydown', e => {
@@ -486,15 +606,15 @@ async function loadStories(container) {
     }
 }
 
-
+/* ---- Modal Controller ---- */
 (function initStoryModal() {
     const overlay   = document.getElementById('story-modal-overlay');
     const closeBtn  = document.getElementById('story-modal-close');
     if (!overlay || !closeBtn) return;
 
-   
+    /* Open modal and populate content */
     window.showStoryModal = function(story) {
-      
+        // Populate image
         const img = document.getElementById('modal-img');
         if (story.image) {
             img.src = story.image;
@@ -505,48 +625,53 @@ async function loadStories(container) {
             overlay.querySelector('.story-modal-img-wrap').style.display = 'none';
         }
 
-        
+        // Populate meta
         document.getElementById('modal-cat').textContent  = story.category;
         document.getElementById('modal-date').textContent = formatDate(story.date);
 
-     
+        // Populate title
         document.getElementById('modal-title').textContent = story.title;
 
-       
+        // Populate content — each string in the array becomes a <p>
         document.getElementById('modal-content').innerHTML =
             (story.content || []).map(para => `<p>${para}</p>`).join('');
 
-       
+        // Open
         overlay.classList.add('open');
         overlay.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-open');
 
-       
+        // Move focus inside modal for keyboard users
         setTimeout(() => closeBtn.focus(), 50);
     };
 
-   
+    /* Close helpers */
     function closeModal() {
         overlay.classList.remove('open');
         overlay.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('modal-open');
-       
+        // Scroll modal back to top for next open
         overlay.querySelector('.story-modal').scrollTop = 0;
     }
 
-
+    // Close button
     closeBtn.addEventListener('click', closeModal);
 
-
+    // Click outside modal box
     overlay.addEventListener('click', e => {
         if (e.target === overlay) closeModal();
     });
 
-  
+    // Escape key
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
     });
 })();
+
+
+/* ===========================================================
+   7. UTILITIES
+   =========================================================== */
 async function fetchJSON(url) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Failed to fetch ${url}`);
