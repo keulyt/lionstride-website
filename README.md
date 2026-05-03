@@ -12,6 +12,7 @@ lionstride/
 ├── script.js             # All JavaScript — interactions, dynamic rendering
 │
 ├── athletes.json         #  Athlete roster + full profile data
+├── scroll.json         #  Athlete scrolling image data
 ├── news.json             #  News & agency updates
 ├── targets.json          #  Outreach race targets
 ├── stories.json          #  Community stories / articles
