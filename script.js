@@ -1,15 +1,3 @@
-/* ===========================================================
-   LIONSTRIDE MANAGEMENT — Main JavaScript v2
-   Refined: Tags, carousel, asymmetric grid support
-   -----------------------------------------------------------
-   1. Init
-   2. Navigation
-   3. Sticky Header
-   4. Featured Carousel
-   5. Dynamic Content (athletes + news)
-   6. Contact Form
-   7. Utilities
-   =========================================================== */
 
 document.addEventListener('DOMContentLoaded', init);
 
