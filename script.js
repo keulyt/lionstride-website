@@ -220,11 +220,13 @@ async function loadDynamicContent() {
     const athletesGrid = document.getElementById('athletes-grid');
     const newsGrid      = document.getElementById('news-grid');
     const targetsList   = document.getElementById('targets-list');
+    const storiesGrid   = document.getElementById('stories-grid');
 
     await Promise.allSettled([
         athletesGrid ? loadAthletes(athletesGrid)   : Promise.resolve(),
         newsGrid      ? loadNews(newsGrid)           : Promise.resolve(),
         targetsList   ? loadTargets(targetsList)     : Promise.resolve(),
+         storiesGrid   ? loadStories(storiesGrid)    : Promise.resolve(),
     ]);
 
     if (typeof AOS !== 'undefined') AOS.refresh();
