@@ -19,7 +19,6 @@ lionstride/
 ├── README.md             # This file
 │
 └── assets/
-    ├── favicon.svg       # Site favicon (SVG)
     ├── athletes/         # Athlete portrait photos
     │   └── justilin-foimi.jpg  (replace with real photo)
         └── keuly-yemele.jpg    (replace with real photo)
