@@ -22,7 +22,7 @@
         "badge": "Target #2",
         "name": "Abidjan Marathon",
         "location": "Abidjan, Ivory Coast",
-        "image": "https://images.unsplash.com/photo-1502904550040-7534597429ae",
+        "image": "assets/marathon-abidjan.jpg",
         "date": "Nov 15, 2026",
         "prizePool": "Competitive",
         "website": "marathon-index.com/races/abidjan-marathon",
