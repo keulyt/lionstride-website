@@ -40,7 +40,7 @@
         "badge": "Target #3",
         "name": "Nairobi City Marathon",
         "location": "Nairobi, Kenya",
-        "image": "assets/nairobi-city-marathon.jpg",
+        "image": "https://nairobicitymarathon.com/wp-content/uploads/2024/04/Nairobi-City-Marathon.jpg",
         "date": "March 2026",
         "prizePool": "TBD",
         "website": "https://nairobicitymarathon.com",
