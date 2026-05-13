@@ -41,13 +41,13 @@
         "name": "Nairobi City Marathon",
         "location": "Nairobi, Kenya",
         "image": "assets/nairobi.jpeg",
-        "date": "March 2026",
+        "date": "June 7 2026",
         "prizePool": "TBD",
         "website": "https://nairobicitymarathon.com",
         "email": "info@nairobicitymarathon.com",
         "why": "Strategic East African race with strong visibility and local networking opportunities for elite athlete placements.",
         "details": [
-            { "icon": "calendar", "label": "Date", "value": "June 2026" },
+            { "icon": "calendar", "label": "Date", "value": "June 7 2026" },
             { "icon": "trophy",   "label": "Prize Pool (Top)", "value": "TBD" },
             { "icon": "globe",    "label": "Website", "value": "https://nairobicitymarathon.com" },
             { "icon": "email",    "label": "Contact Email", "value": "info@nairobicitymarathon.com" }
