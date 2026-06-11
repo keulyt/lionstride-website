@@ -925,7 +925,7 @@ h1, h2, h3, h4 {
 
 /* First card — larger, spanning 2 rows */
 .athlete-card:first-child {
-    grid-row: span 2;
+    grid-row: span 1;
 }
 
 /* Athlete Card */
