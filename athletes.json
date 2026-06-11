@@ -1,149 +1,169 @@
+```json
 [
-    {
-        "id": "justilin-foimi",
+  {
+    "id": "justilin-foimi",
+    "name": "Justilin Foimi",
+    "sport": "Elite Long-Distance Runner - Marathon & Endurance",
+    "nationality": "Cameroon 🇨🇲",
+    "specialty": "Marathon, Half Marathon, 10,000m, 5,000m",
+    "Height": "1.78 m",
+    "Weight": "57 kg",
+    "DateOfBirth": "September 15, 1995",
+    "activeSince": "2015",
+    "image": "assets/athletes/profile.jpg",
 
-        "name": "Justilin Foimi",
-        "sport": "Elite Long-Distance Runner - Marathon & Endurance",
-        "nationality": "Cameroon 🇨🇲",
-        "specialty": "Marathon, Half Marathon, 10,000m, 5,000m",
-        "Height": "1.78 m",
-        "Weight": "57 kg",
-        "DateOfBirth": "September 15, 1995",
-        "activeSince": "2015",
-        "image": "assets/athletes/profile.jpg",
+    "tags": [
+      "6× Cameroon Champion",
+      "Marathon Best 2h15",
+      "International Wins Since 2015"
+    ],
 
-        "tags": [
-            "6× Cameroon Champion",
-            "Marathon Best 2h15",
-            "International Wins Since 2015"
-        ],
+    "infoFields": [
+      { "label": "Nationality", "value": "Cameroon 🇨🇲" },
+      { "label": "Date Of Birth", "value": "September 15, 1995" },
+      { "label": "Height", "value": "1.78 m" },
+      { "label": "Weight", "value": "57 kg" },
+      { "label": "Specialty", "value": "Marathon, Half Marathon, 10,000m, 5,000m" }
+    ],
 
-        "infoFields": [
-            { "label": "Nationality",  "value": "Cameroon 🇨🇲" },
-            { "label": "Date Of Birth",  "value": "September 15, 1995" },
-             { "label": "Height", "value": "1.78 m" },
-              { "label": "Weight", "value": "57 kg" },
-            { "label": "Specialty",    "value": "Marathon, Half Marathon, 10,000m, 5,000m" }
-           
-        ],
+    "performanceStats": [
+      { "label": "International Wins", "value": "20+" },
+      { "label": "Douala Marathon", "value": "2× Winner" },
+      { "label": "Abidjan Marathon", "value": "3× Winner" },
+      { "label": "Multiple Wins", "value": "West & Central Africa" }
+    ],
 
-        "performanceStats": [
-            { "label": "International Wins", "value": "20+" },
-            { "label": "Douala Marathon", "value": "2× Winner" },
-            { "label": "Abidjan Marathon", "value": "3× Winner" },
-            { "label": "Multiple wins",    "value": "West & Central Africa" }
-        ],
+    "description": "Justilin Foimi is one of the most accomplished long-distance runners in Central and West Africa. Known for his consistency, endurance, and winning mentality, he has built a strong reputation across international marathons and road races. His ability to perform over a range of distances, from 5,000m to the full marathon, makes him a versatile and valuable athlete for elite competitions worldwide. Currently focused on advancing to higher-level international races, Justilin aims to compete on major global stages and continue improving his performance.",
 
-        "description": "Justilin Foimi is one of the most accomplished long-distance runners in Central and West Africa. Known for his consistency, endurance, and winning mentality, he has built a strong reputation across international marathons and road races. His ability to perform over a range of distances, from 5,000m to the full marathon, makes him a versatile and valuable athlete for elite competitions worldwide. Currently focused on advancing to higher-level international races, Justilin aims to compete on major global stages and continue improving his performance.",
+    "results": [
+      { "year": "2025", "event": "Douala Marathon", "result": "1st Place", "time": "2h35" },
+      { "year": "2025", "event": "Abidjan Marathon", "result": "1st Place", "time": "2h20" },
+      { "year": "2024", "event": "Lomé Marathon", "result": "1st Place", "time": "2h19" },
+      { "year": "2023", "event": "Douala Marathon", "result": "1st Place", "time": "2h15" },
+      { "year": "2023", "event": "Malabo Half Marathon", "result": "1st Place", "time": "1h03" }
+    ],
 
-        "results": [
-            { "year": "2025", "event": "Douala Marathon",      "result": "1st Place", "time": "2h35" },
-            { "year": "2025", "event": "Abidjan Marathon",     "result": "1st Place", "time": "2h20" },
-            { "year": "2024", "event": "Lomé Marathon",        "result": "1st Place", "time": "2h19" },
-            { "year": "2023", "event": "Douala Marathon",      "result": "1st Place", "time": "2h15" },
-            { "year": "2023", "event": "Malabo Half Marathon", "result": "1st Place", "time": "1h03" }
-        ],
+    "achievements": [
+      {
+        "title": "6× Cameroon National Champion — 10,000m",
+        "subtitle": "Dominant long-distance track performance at national level",
+        "icon": "trophy"
+      },
+      {
+        "title": "6× Cameroon National Champion — 5,000m",
+        "subtitle": "Consistent national title holder across multiple seasons",
+        "icon": "trophy"
+      },
+      {
+        "title": "Multiple National & Regional Titles",
+        "subtitle": "Established record of podium finishes across West & Central Africa",
+        "icon": "medal"
+      }
+    ],
 
-        "achievements": [
-            {
-                "title": "6× Cameroon National Champion — 10,000m",
-                "subtitle": "Dominant long-distance track performance at national level",
-                "icon": "trophy"
-            },
-            {
-                "title": "6× Cameroon National Champion — 5,000m",
-                "subtitle": "Consistent national title holder across multiple seasons",
-                "icon": "trophy"
-            },
-            {
-                "title": "Multiple National & Regional Titles",
-                "subtitle": "Established record of podium finishes across West & Central Africa",
-                "icon": "medal"
-            }
-        ],
+    "careerPositioning": [
+      {
+        "title": "Competing in major international marathons"
+      },
+      {
+        "title": "Improving marathon time toward elite global standards"
+      },
+      {
+        "title": "Building long-term professional athletic career"
+      }
+    ],
 
-        "careerPositioning":[
-            {
-                "title": "Competing in major international marathons"
-               
-            },
-            {
-                "title": "Improving marathon time toward elite global standards"
-               
-            },
-            {
-                "title": "Building long-term professional athletic career"
-               
-            }
-        ],
-        "representation": [
-            { "icon": "trophy",   "label": "Elite Athlete Representation" },
-            { "icon": "calendar", "label": "Race Placement" },
-            { "icon": "chart",    "label": "Career Development" },
-            { "icon": "globe",    "label": "Global Exposure" }
-        ]
-    }
-],
-        "representation": [
-            { "icon": "trophy",   "label": "Elite Athlete Representation" },
-            { "icon": "calendar", "label": "Race Placement" },
-            { "icon": "chart",    "label": "Career Development" },
-            { "icon": "globe",    "label": "Global Exposure" }
-        ]
-    },
-    {
-        "id": "geoffrey-kipchirchir",
-        "name": "Geoffrey Kipchirchir Kirwa",
-        "sport": "Elite Long-Distance Runner",
-        "nationality": "Kenya 🇰🇪",
-        "specialty": "Marathon, Half Marathon",
-        "activeSince": "2023",
-        "image": "assets/athletes/geoffrey-kipchirchir.jpg",
+    "representation": [
+      { "icon": "trophy", "label": "Elite Athlete Representation" },
+      { "icon": "calendar", "label": "Race Placement" },
+      { "icon": "chart", "label": "Career Development" },
+      { "icon": "globe", "label": "Global Exposure" }
+    ]
+  },
 
-        "tags": [
-            "Half Marathon Best 1:03:39",
-            "Marathon Best 2:18:14",
-            "World Athletics Registered Athlete"
-        ],
+  {
+    "id": "geoffrey-kipchirchir",
+    "name": "Geoffrey Kipchirchir Kirwa",
+    "sport": "Elite Long-Distance Runner",
+    "nationality": "Kenya 🇰🇪",
+    "specialty": "Marathon, Half Marathon",
+    "activeSince": "2023",
+    "image": "assets/athletes/geoffrey-kipchirchir.jpg",
 
-        "infoFields": [
-            { "label": "Nationality", "value": "Kenya 🇰🇪" },
-            { "label": "Sport", "value": "Long-Distance Running" },
-            { "label": "Specialty", "value": "Marathon, Half Marathon" },
-            { "label": "World Athletics Code", "value": "14985608" }
-        ],
+    "tags": [
+      "Half Marathon Best 1:03:39",
+      "Marathon Best 2:18:14",
+      "World Athletics Registered Athlete"
+    ],
 
-        "performanceStats": [
-            { "label": "Half Marathon Best", "value": "1:03:39" },
-            { "label": "Marathon Best", "value": "2:18:14" },
-            { "label": "Primary Events", "value": "Half Marathon / Marathon" },
-            { "label": "Nationality", "value": "Kenya" }
-        ],
+    "infoFields": [
+      { "label": "Nationality", "value": "Kenya 🇰🇪" },
+      { "label": "World Athletics Code", "value": "14985608" },
+      { "label": "Specialty", "value": "Marathon, Half Marathon" },
+      { "label": "Status", "value": "International Athlete" }
+    ],
 
-        "description": "Geoffrey Kipchirchir Kirwa is a Kenyan long-distance runner specializing in the half marathon and marathon. With a half marathon personal best of 1:03:39 and a marathon best of 2:18:14, Geoffrey continues to develop as a competitive road racer while pursuing international racing opportunities. His focus is to improve his performances, gain global race exposure, and build a long-term professional running career.",
+    "performanceStats": [
+      { "label": "Half Marathon Best", "value": "1:03:39" },
+      { "label": "Marathon Best", "value": "2:18:14" },
+      { "label": "Primary Events", "value": "Half Marathon / Marathon" },
+      { "label": "Nationality", "value": "Kenya" }
+    ],
 
-        "results": [
-            { "year": "2025", "event": "Independence Square Half Marathon, Accra", "result": "Personal Best", "time": "1:03:39" },
-            { "year": "2023", "event": "Marathon", "result": "Personal Best", "time": "2:18:14" }
-        ],
+    "description": "Geoffrey Kipchirchir Kirwa is a Kenyan long-distance runner specializing in the half marathon and marathon. With a half marathon personal best of 1:03:39 and a marathon best of 2:18:14, Geoffrey continues to develop as a competitive road racer while pursuing international racing opportunities. His focus is to improve his performances, gain global race exposure, and build a long-term professional running career.",
 
-        "achievements": [
-            { "title": "Half Marathon Personal Best — 1:03:39", "subtitle": "Recorded in Accra, Ghana in 2025", "icon": "trophy" },
-            { "title": "Marathon Personal Best — 2:18:14", "subtitle": "Established marathon performance mark", "icon": "calendar" },
-            { "title": "World Athletics Registered Athlete", "subtitle": "Official World Athletics athlete profile available", "icon": "globe" }
-        ],
+    "results": [
+      {
+        "year": "2025",
+        "event": "Independence Square Half Marathon, Accra",
+        "result": "Personal Best",
+        "time": "1:03:39"
+      },
+      {
+        "year": "2023",
+        "event": "Marathon",
+        "result": "Personal Best",
+        "time": "2:18:14"
+      }
+    ],
 
-        "careerPositioning": [
-            { "title": "Competing in international road races" },
-            { "title": "Improving marathon performance toward higher elite standards" },
-            { "title": "Building a long-term professional athletic career" }
-        ],
+    "achievements": [
+      {
+        "title": "Half Marathon Personal Best — 1:03:39",
+        "subtitle": "Recorded in Accra, Ghana",
+        "icon": "trophy"
+      },
+      {
+        "title": "Marathon Personal Best — 2:18:14",
+        "subtitle": "Established marathon performance mark",
+        "icon": "calendar"
+      },
+      {
+        "title": "World Athletics Registered Athlete",
+        "subtitle": "Official athlete profile available",
+        "icon": "globe"
+      }
+    ],
 
-        "representation": [
-            { "icon": "trophy", "label": "Elite Athlete Representation" },
-            { "icon": "calendar", "label": "Race Placement" },
-            { "icon": "chart", "label": "Career Development" },
-            { "icon": "globe", "label": "Global Exposure" }
-        ]
-    }
+    "careerPositioning": [
+      {
+        "title": "Competing in international road races"
+      },
+      {
+        "title": "Improving marathon performance toward higher elite standards"
+      },
+      {
+        "title": "Building a long-term professional athletic career"
+      }
+    ],
+
+    "representation": [
+      { "icon": "trophy", "label": "Elite Athlete Representation" },
+      { "icon": "calendar", "label": "Race Placement" },
+      { "icon": "chart", "label": "Career Development" },
+      { "icon": "globe", "label": "Global Exposure" }
+    ]
+  }
 ]
+```
+
