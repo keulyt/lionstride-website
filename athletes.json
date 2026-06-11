@@ -84,75 +84,102 @@
     "id": "geofrey-kipchirchir",
     "name": "Geofrey Kipchirchir Kirwa",
     "sport": "Elite Long-Distance Runner",
-    "nationality": "Kenya 🇰🇪",
-    "specialty": "Marathon, Half Marathon",
-    "activeSince": "2023",
-    "image": "assets/athletes/geoffrey-kipchirchir.jpg",
+    "nationality": "Kenya",
+    "specialty": "Half Marathon, Marathon, 10,000m, 5,000m",
+    "DateOfBirth": "January 1, 1991",
+    "activeSince": "2017",
+    "image": "assets/athletes/geofrey-kipchirchir.jpg",
 
     "tags": [
+      "Madiba Half Marathon Champion",
       "Half Marathon Best 1:03:39",
-      "Marathon Best 2:18:14",
       "World Athletics Registered Athlete"
     ],
 
     "infoFields": [
       { "label": "Nationality", "value": "Kenya 🇰🇪" },
+      { "label": "Date Of Birth", "value": "January 1, 1991" },
       { "label": "World Athletics Code", "value": "14985608" },
-      { "label": "Specialty", "value": "Marathon, Half Marathon" },
-      { "label": "Status", "value": "International Athlete" }
+      { "label": "Coach", "value": "Mohammed Serem" },
+      { "label": "Location", "value": "Eldoret, Kenya" },
+      { "label": "Specialty", "value": "Half Marathon, Marathon" }
     ],
 
     "performanceStats": [
-      { "label": "Half Marathon Best", "value": "1:03:39" },
-      { "label": "Marathon Best", "value": "2:18:14" },
-      { "label": "Primary Events", "value": "Half Marathon / Marathon" },
-      { "label": "Nationality", "value": "Kenya" }
+      { "label": "Half Marathon PB", "value": "1:03:39" },
+      { "label": "Marathon PB", "value": "2:18:14" },
+      { "label": "Weekly Mileage", "value": "182 km" },
+      { "label": "Years Competitive", "value": "8+" }
     ],
 
-    "description": "Geofrey Kipchirchir Kirwa is a Kenyan long-distance runner specializing in the half marathon and marathon. With a half marathon personal best of 1:03:39 and a marathon best of 2:18:14, Geofrey continues to develop as a competitive road racer while pursuing international racing opportunities. His focus is to improve his performances, gain global race exposure, and build a long-term professional running career.",
+    "description": "Geofrey Kipchirchir Kirwa is a Kenyan long-distance runner based in Eldoret, Kenya. Specializing in the half marathon and marathon, he trains under Coach Mohammed Serem and has built a reputation as a strong road racing athlete throughout East Africa. Geofrey has recorded an official World Athletics verified half marathon personal best of 1:03:39 and a marathon best of 2:18:14. He is a proven competitor with victories and podium finishes in major regional races, including a victory at the Madiba Half Marathon. His ambition is to continue improving toward world-class marathon standards while expanding his international racing opportunities.",
 
     "results": [
       {
         "year": "2025",
-        "event": "Independence Square Half Marathon, Accra",
-        "result": "Personal Best",
-        "time": "1:03:39"
+        "event": "Millennium Half Marathon - Accra, Ghana",
+        "result": "8th Place",
+        "time": "1:03:39 (PB)"
+      },
+      {
+        "year": "2025",
+        "event": "Madiba Half Marathon",
+        "result": "1st Place",
+        "time": "Winner"
+      },
+      {
+        "year": "2025",
+        "event": "BeMore Half Marathon",
+        "result": "1st Place",
+        "time": "Podium Finish"
+      },
+      {
+        "year": "2025",
+        "event": "Al Basra Half Marathon",
+        "result": "2nd Place",
+        "time": "Podium Finish"
+      },
+      {
+        "year": "2025",
+        "event": "Mombasa 10K",
+        "result": "2nd Place",
+        "time": "Podium Finish"
       },
       {
         "year": "2023",
-        "event": "Marathon",
-        "result": "Personal Best",
-        "time": "2:18:14"
+        "event": "Standard Chartered Nairobi Marathon",
+        "result": "16th Place",
+        "time": "2:18:14 (PB)"
       }
     ],
 
     "achievements": [
       {
-        "title": "Half Marathon Personal Best — 1:03:39",
-        "subtitle": "Recorded in Accra, Ghana",
+        "title": "Madiba Half Marathon Champion",
+        "subtitle": "Winner of one of Central Africa's leading road races",
         "icon": "trophy"
       },
       {
-        "title": "Marathon Personal Best — 2:18:14",
-        "subtitle": "Established marathon performance mark",
-        "icon": "calendar"
+        "title": "Half Marathon Personal Best — 1:03:39",
+        "subtitle": "World Athletics verified performance in Accra, Ghana",
+        "icon": "medal"
       },
       {
         "title": "World Athletics Registered Athlete",
-        "subtitle": "Official athlete profile available",
+        "subtitle": "Official athlete profile and verified results",
         "icon": "globe"
       }
     ],
 
     "careerPositioning": [
       {
-        "title": "Competing in international road races"
+        "title": "Competing in elite international half marathons"
       },
       {
-        "title": "Improving marathon performance toward higher elite standards"
+        "title": "Progressing toward sub-2:10 marathon performances"
       },
       {
-        "title": "Building a long-term professional athletic career"
+        "title": "Building a long-term professional running career"
       }
     ],
 
@@ -164,4 +191,3 @@
     ]
   }
 ]
-
