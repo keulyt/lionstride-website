@@ -83,47 +83,67 @@
             { "icon": "globe",    "label": "Global Exposure" }
         ]
     }
+],
+        "representation": [
+            { "icon": "trophy",   "label": "Elite Athlete Representation" },
+            { "icon": "calendar", "label": "Race Placement" },
+            { "icon": "chart",    "label": "Career Development" },
+            { "icon": "globe",    "label": "Global Exposure" }
+        ]
+    },
+    {
+        "id": "geoffrey-kipchirchir",
+        "name": "Geoffrey Kipchirchir Kirwa",
+        "sport": "Elite Long-Distance Runner",
+        "nationality": "Kenya 🇰🇪",
+        "specialty": "Marathon, Half Marathon",
+        "activeSince": "2023",
+        "image": "assets/athletes/geoffrey-kipchirchir.jpg",
+
+        "tags": [
+            "Half Marathon Best 1:03:39",
+            "Marathon Best 2:18:14",
+            "World Athletics Registered Athlete"
+        ],
+
+        "infoFields": [
+            { "label": "Nationality", "value": "Kenya 🇰🇪" },
+            { "label": "Sport", "value": "Long-Distance Running" },
+            { "label": "Specialty", "value": "Marathon, Half Marathon" },
+            { "label": "World Athletics Code", "value": "14985608" }
+        ],
+
+        "performanceStats": [
+            { "label": "Half Marathon Best", "value": "1:03:39" },
+            { "label": "Marathon Best", "value": "2:18:14" },
+            { "label": "Primary Events", "value": "Half Marathon / Marathon" },
+            { "label": "Nationality", "value": "Kenya" }
+        ],
+
+        "description": "Geoffrey Kipchirchir Kirwa is a Kenyan long-distance runner specializing in the half marathon and marathon. With a half marathon personal best of 1:03:39 and a marathon best of 2:18:14, Geoffrey continues to develop as a competitive road racer while pursuing international racing opportunities. His focus is to improve his performances, gain global race exposure, and build a long-term professional running career.",
+
+        "results": [
+            { "year": "2025", "event": "Independence Square Half Marathon, Accra", "result": "Personal Best", "time": "1:03:39" },
+            { "year": "2023", "event": "Marathon", "result": "Personal Best", "time": "2:18:14" }
+        ],
+
+        "achievements": [
+            { "title": "Half Marathon Personal Best — 1:03:39", "subtitle": "Recorded in Accra, Ghana in 2025", "icon": "trophy" },
+            { "title": "Marathon Personal Best — 2:18:14", "subtitle": "Established marathon performance mark", "icon": "calendar" },
+            { "title": "World Athletics Registered Athlete", "subtitle": "Official World Athletics athlete profile available", "icon": "globe" }
+        ],
+
+        "careerPositioning": [
+            { "title": "Competing in international road races" },
+            { "title": "Improving marathon performance toward higher elite standards" },
+            { "title": "Building a long-term professional athletic career" }
+        ],
+
+        "representation": [
+            { "icon": "trophy", "label": "Elite Athlete Representation" },
+            { "icon": "calendar", "label": "Race Placement" },
+            { "icon": "chart", "label": "Career Development" },
+            { "icon": "globe", "label": "Global Exposure" }
+        ]
+    }
 ]
-{
-  "id": "geoffrey-kipchirchir",
-  "name": "Geoffrey Kipchirchir Kirwa",
-  "sport": "Elite Long-Distance Runner",
-  "nationality": "Kenya",
-  "specialty": "Marathon, Half Marathon",
-  "activeSince": "2023",
-  "image": "assets/athletes/geoffrey-kipchirchir.jpg",
-  "tags": [
-    "Half Marathon Best 1:03:39",
-    "Marathon Best 2:18:14",
-    "World Athletics Registered Athlete"
-  ],
-  "infoFields": [
-    { "label": "Nationality", "value": "Kenya 🇰🇪" },
-    { "label": "Sport", "value": "Long-Distance Running" },
-    { "label": "Specialty", "value": "Marathon, Half Marathon" },
-    { "label": "World Athletics Code", "value": "14985608" }
-  ],
-  "performanceStats": [
-    { "label": "Half Marathon Best", "value": "1:03:39" },
-    { "label": "Marathon Best", "value": "2:18:14" },
-    { "label": "Primary Events", "value": "Half Marathon / Marathon" },
-    { "label": "Nationality", "value": "Kenya" }
-  ],
-  "description": "Geoffrey Kipchirchir Kirwa is a Kenyan long-distance runner specializing in the half marathon and marathon. With a half marathon personal best of 1:03:39 and a marathon best of 2:18:14, Geoffrey continues to develop as a competitive road racer while pursuing international racing opportunities. His focus is to improve his performances, gain global race exposure, and build a long-term professional running career.",
-  "results": [
-    { "year": "2025", "event": "Independence Square Half Marathon, Accra", "result": "Personal Best", "time": "1:03:39" },
-    { "year": "2023", "event": "Marathon", "result": "Personal Best", "time": "2:18:14" }
-  ],
-  "achievements": [
-    { "title": "Half Marathon Personal Best — 1:03:39", "subtitle": "Recorded in Accra, Ghana in 2025", "icon": "trophy" },
-    { "title": "Marathon Personal Best — 2:18:14", "subtitle": "Established marathon performance mark", "icon": "calendar" },
-    { "title": "World Athletics Registered Athlete", "subtitle": "Official World Athletics athlete profile available", "icon": "globe" }
-  ],
-  "careerPositioning": "Focused on international road racing opportunities, improving marathon performance, and building a long-term professional athletic career.",
-  "representation": [
-    { "icon": "trophy", "label": "Elite Athlete Representation" },
-    { "icon": "calendar", "label": "Race Placement" },
-    { "icon": "chart", "label": "Career Development" },
-    { "icon": "globe", "label": "Global Exposure" }
-  ]
-}
