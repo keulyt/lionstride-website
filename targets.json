@@ -79,23 +79,27 @@
     ]
   },
   {
-    "id": 5,
-    "badge": "Target #5",
-    "name": "Marathon d'Edea",
-    "location": "Edea, Cameroon",
-    "image": "assets/edea.jpg",
-    "date": "2026",
-    "prizePool": "Competitive",
-    "website": "Pending official publication",
-    "email": "Via Marathon d'Edea Organizing Committee",
-    "why": "Emerging Central African marathon with strong local support and growing elite participation. A strategic race for LionStride athletes seeking marathon opportunities and regional visibility.",
-    "details": [
-      { "icon": "calendar", "label": "Date", "value": "June 26, 2026 Edition" },
-      { "icon": "globe", "label": "Location", "value": "Edea, Cameroon" },
-      { "icon": "globe", "label": "Distance", "value": "42.195 km" },
-      { "icon": "trophy", "label": "Prize Money", "value": "Competitive" },
-      { "icon": "email", "label": "Contact", "value": "Marathon d'Edea Organizing Committee" }
-    ]
-  }
+  "id": 5,
+  "badge": "Target #5",
+  "name": "Marathon International Francophone des Travailleurs d'Edea",
+  "location": "Edea, Cameroon",
+  "image": "assets/edea.jpg",
+  "date": "June 26-27, 2026",
+  "prizePool": "1,200,000 FCFA (Winner)",
+  "website": "Pending official publication",
+  "email": "fecastra@yahoo.com",
+  "why": "Established international workers marathon organized by FECASTRA. Offers prize money for both marathon and half marathon events and provides a strong opportunity for LionStride athletes to compete in Central Africa.",
+  "details": [
+    { "icon": "calendar", "label": "Date", "value": "June 26-27, 2026" },
+    { "icon": "globe", "label": "Location", "value": "Edea, Cameroon" },
+    { "icon": "globe", "label": "Distance", "value": "42.195 km" },
+    { "icon": "trophy", "label": "1st Place", "value": "1,200,000 FCFA" },
+    { "icon": "trophy", "label": "2nd Place", "value": "800,000 FCFA" },
+    { "icon": "trophy", "label": "3rd Place", "value": "500,000 FCFA" },
+    { "icon": "trophy", "label": "4th Place", "value": "160,000 FCFA" },
+    { "icon": "trophy", "label": "5th Place", "value": "130,000 FCFA" },
+    { "icon": "email", "label": "Contact Email", "value": "fecastra@yahoo.com" }
+  ]
+},
 ]
 
