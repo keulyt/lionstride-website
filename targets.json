@@ -12,7 +12,7 @@
     "why": "Strong African International marathon with serious prize money and realistic athlete placement opportunities.",
     "details": [
       { "icon": "calendar", "label": "Date", "value": "February 2027" },
-      { "icon": "trophy", "label": "Prize Pool (Top)", "value": "$50,000" },
+      { "icon": "trophy", "label": "Prize Pool", "value": "$50,000" },
       { "icon": "globe", "label": "Website", "value": "lagoscitymarathon.com" },
       { "icon": "email", "label": "Contact Email", "value": "info@lagoscitymarathon.com" }
     ]
@@ -30,7 +30,7 @@
     "why": "Strategic West African race target aligned with emerging athlete placement opportunities.",
     "details": [
       { "icon": "calendar", "label": "Date", "value": "Nov 15, 2026" },
-      { "icon": "trophy", "label": "Prize Pool (Top)", "value": "Competitive" },
+      { "icon": "trophy", "label": "Prize Pool", "value": "Competitive" },
       { "icon": "globe", "label": "Website", "value": "marathon-index.com/races/abidjan-marathon" },
       { "icon": "email", "label": "Contact Email", "value": "Pending outreach" }
     ]
@@ -38,8 +38,8 @@
   {
     "id": 3,
     "badge": "Target #3",
-    "name": "N'Djamena International Peace Half Marathon",
-    "location": "N'Djamena, Chad",
+    "name": "NDjamena International Peace Half Marathon",
+    "location": "NDjamena, Chad",
     "image": "assets/djamena.jpg",
     "date": "July 26, 2026",
     "prizePool": "3,000,000 FCFA",
@@ -48,7 +48,7 @@
     "why": "Strategic Central African half marathon offering strong prize money and realistic opportunities for LionStride athletes to gain international exposure and compete for podium positions.",
     "details": [
       { "icon": "calendar", "label": "Date", "value": "July 26, 2026" },
-      { "icon": "globe", "label": "Location", "value": "N'Djamena, Chad" },
+      { "icon": "globe", "label": "Location", "value": "NDjamena, Chad" },
       { "icon": "trophy", "label": "1st Place", "value": "3,000,000 FCFA" },
       { "icon": "trophy", "label": "2nd Place", "value": "2,000,000 FCFA" },
       { "icon": "trophy", "label": "3rd Place", "value": "1,000,000 FCFA" },
@@ -79,27 +79,25 @@
     ]
   },
   {
-  "id": 5,
-  "badge": "Target #5",
-  "name": "Marathon International Francophone des Travailleurs d'Edea",
-  "location": "Edea, Cameroon",
-  "image": "assets/edea.jpg",
-  "date": "June 26-27, 2026",
-  "prizePool": "1,200,000 FCFA (Winner)",
-  "website": "Pending official publication",
-  "email": "fecastra@yahoo.com",
-  "why": "Established international workers marathon organized by FECASTRA. Offers prize money for both marathon and half marathon events and provides a strong opportunity for LionStride athletes to compete in Central Africa.",
-  "details": [
-    { "icon": "calendar", "label": "Date", "value": "June 26-27, 2026" },
-    { "icon": "globe", "label": "Location", "value": "Edea, Cameroon" },
-    { "icon": "globe", "label": "Distance", "value": "42.195 km" },
-    { "icon": "trophy", "label": "1st Place", "value": "1,200,000 FCFA" },
-    { "icon": "trophy", "label": "2nd Place", "value": "800,000 FCFA" },
-    { "icon": "trophy", "label": "3rd Place", "value": "500,000 FCFA" },
-    { "icon": "trophy", "label": "4th Place", "value": "160,000 FCFA" },
-    { "icon": "trophy", "label": "5th Place", "value": "130,000 FCFA" },
-    { "icon": "email", "label": "Contact Email", "value": "fecastra@yahoo.com" }
-  ]
-}
+    "id": 5,
+    "badge": "Target #5",
+    "name": "Marathon International Francophone des Travailleurs dEdea",
+    "location": "Edea, Cameroon",
+    "image": "assets/edea.jpg",
+    "date": "June 26-27, 2026",
+    "prizePool": "1,200,000 FCFA",
+    "website": "Pending official publication",
+    "email": "fecastra@yahoo.com",
+    "why": "Established international workers marathon organized by FECASTRA. Offers prize money for both marathon and half marathon events and provides a strong opportunity for LionStride athletes to compete in Central Africa.",
+    "details": [
+      { "icon": "calendar", "label": "Date", "value": "June 26-27, 2026" },
+      { "icon": "globe", "label": "Location", "value": "Edea, Cameroon" },
+      { "icon": "globe", "label": "Distance", "value": "42.195 km" },
+      { "icon": "trophy", "label": "Marathon 1st", "value": "1,200,000 FCFA" },
+      { "icon": "trophy", "label": "Marathon 2nd", "value": "800,000 FCFA" },
+      { "icon": "trophy", "label": "Marathon 3rd", "value": "500,000 FCFA" },
+      { "icon": "trophy", "label": "Half Marathon 1st", "value": "650,000 FCFA" },
+      { "icon": "email", "label": "Contact Email", "value": "fecastra@yahoo.com" }
+    ]
+  }
 ]
-
