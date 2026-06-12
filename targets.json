@@ -1,56 +1,61 @@
 [
-    {
-        "id": 1,
-        "badge": "Target #1",
-        "name": "Access Bank Lagos City Marathon",
-        "location": "Lagos, Nigeria",
-        "image": "assets/Lagos-Marathon.jpg",
-        "date": "February 2027",
-        "prizePool": "$50,000",
-        "website": "lagoscitymarathon.com",
-        "email": "info@lagoscitymarathon.com",
-        "why": "Strong African International marathon with serious prize money and realistic athlete placement opportunities.",
-        "details": [
-            { "icon": "calendar", "label": "Date", "value": "February 2027" },
-            { "icon": "trophy",   "label": "Prize Pool (Top)", "value": "$50,000" },
-            { "icon": "globe",    "label": "Website", "value": "lagoscitymarathon.com" },
-            { "icon": "email",    "label": "Contact Email", "value": "info@lagoscitymarathon.com" }
-        ]
-    },
-    {
-        "id": 2,
-        "badge": "Target #2",
-        "name": "Abidjan Marathon",
-        "location": "Abidjan, Ivory Coast",
-        "image": "assets/marathondabijan.jpg",
-        "date": "Nov 15, 2026",
-        "prizePool": "Competitive",
-        "website": "marathon-index.com/races/abidjan-marathon",
-        "email": "Pending outreach",
-        "why": "Strategic West African race target aligned with emerging athlete placement opportunities",
-        "details": [
-            { "icon": "calendar", "label": "Date", "value": "Nov 15, 2026" },
-            { "icon": "trophy",   "label": "Prize Pool (Top)", "value": "Competitive" },
-            { "icon": "globe",    "label": "Website", "value": "marathon-index.com/races/abidjan-marathon" },
-            { "icon": "email",    "label": "Contact Email", "value": "Pending outreach" }
-        ]
-    },
-    {
-        "id": 3,
-        "badge": "Target #3",
-        "name": "Nairobi City Marathon",
-        "location": "Nairobi, Kenya",
-        "image": "assets/nairobi.jpeg",
-        "date": "June 7 2026",
-        "prizePool": "TBD",
-        "website": "https://nairobicitymarathon.com",
-        "email": "info@nairobicitymarathon.com",
-        "why": "Strategic East African race with strong visibility and local networking opportunities for elite athlete placements.",
-        "details": [
-            { "icon": "calendar", "label": "Date", "value": "June 7 2026" },
-            { "icon": "trophy",   "label": "Prize Pool (Top)", "value": "TBD" },
-            { "icon": "globe",    "label": "Website", "value": "https://nairobicitymarathon.com" },
-            { "icon": "email",    "label": "Contact Email", "value": "info@nairobicitymarathon.com" }
-        ]
-    }
+{
+"id": 1,
+"badge": "Target #1",
+"name": "Access Bank Lagos City Marathon",
+"location": "Lagos, Nigeria",
+"image": "assets/Lagos-Marathon.jpg",
+"date": "February 2027",
+"prizePool": "$50,000",
+"website": "lagoscitymarathon.com",
+"email": "[info@lagoscitymarathon.com](mailto:info@lagoscitymarathon.com)",
+"why": "Strong African International marathon with serious prize money and realistic athlete placement opportunities.",
+"details": [
+{ "icon": "calendar", "label": "Date", "value": "February 2027" },
+{ "icon": "trophy", "label": "Prize Pool (Top)", "value": "$50,000" },
+{ "icon": "globe", "label": "Website", "value": "lagoscitymarathon.com" },
+{ "icon": "email", "label": "Contact Email", "value": "[info@lagoscitymarathon.com](mailto:info@lagoscitymarathon.com)" }
 ]
+},
+{
+"id": 2,
+"badge": "Target #2",
+"name": "Abidjan Marathon",
+"location": "Abidjan, Ivory Coast",
+"image": "assets/marathondabijan.jpg",
+"date": "Nov 15, 2026",
+"prizePool": "Competitive",
+"website": "marathon-index.com/races/abidjan-marathon",
+"email": "Pending outreach",
+"why": "Strategic West African race target aligned with emerging athlete placement opportunities",
+"details": [
+{ "icon": "calendar", "label": "Date", "value": "Nov 15, 2026" },
+{ "icon": "trophy", "label": "Prize Pool (Top)", "value": "Competitive" },
+{ "icon": "globe", "label": "Website", "value": "marathon-index.com/races/abidjan-marathon" },
+{ "icon": "email", "label": "Contact Email", "value": "Pending outreach" }
+]
+},
+{
+"id": 3,
+"badge": "Target #3",
+"name": "N'Djamena International Peace Half Marathon",
+"location": "N'Djamena, Chad",
+"image": "assets/ndjamena-half-marathon.jpg",
+"date": "July 26, 2026",
+"prizePool": "3,000,000 FCFA",
+"website": "semindjamena.com",
+"email": "Contact via Organizing Committee",
+"why": "Strategic Central African half marathon offering strong prize money and realistic opportunities for LionStride athletes to gain international exposure and compete for podium positions.",
+"details": [
+{ "icon": "calendar", "label": "Date", "value": "July 26, 2026" },
+{ "icon": "globe", "label": "Location", "value": "N'Djamena, Chad" },
+{ "icon": "trophy", "label": "1st Place", "value": "3,000,000 FCFA" },
+{ "icon": "trophy", "label": "2nd Place", "value": "2,000,000 FCFA" },
+{ "icon": "trophy", "label": "3rd Place", "value": "1,000,000 FCFA" },
+{ "icon": "globe", "label": "Distance", "value": "21.1 km" },
+{ "icon": "calendar", "label": "Start Time", "value": "07:00" },
+{ "icon": "email", "label": "Elite Coordinator", "value": "Valentin Betoudji" }
+]
+}
+]
+
