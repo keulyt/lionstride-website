@@ -1,61 +1,101 @@
 [
-{
-"id": 1,
-"badge": "Target #1",
-"name": "Access Bank Lagos City Marathon",
-"location": "Lagos, Nigeria",
-"image": "assets/Lagos-Marathon.jpg",
-"date": "February 2027",
-"prizePool": "$50,000",
-"website": "lagoscitymarathon.com",
-"email": "[info@lagoscitymarathon.com](mailto:info@lagoscitymarathon.com)",
-"why": "Strong African International marathon with serious prize money and realistic athlete placement opportunities.",
-"details": [
-{ "icon": "calendar", "label": "Date", "value": "February 2027" },
-{ "icon": "trophy", "label": "Prize Pool (Top)", "value": "$50,000" },
-{ "icon": "globe", "label": "Website", "value": "lagoscitymarathon.com" },
-{ "icon": "email", "label": "Contact Email", "value": "[info@lagoscitymarathon.com](mailto:info@lagoscitymarathon.com)" }
-]
-},
-{
-"id": 2,
-"badge": "Target #2",
-"name": "Abidjan Marathon",
-"location": "Abidjan, Ivory Coast",
-"image": "assets/marathondabijan.jpg",
-"date": "Nov 15, 2026",
-"prizePool": "Competitive",
-"website": "marathon-index.com/races/abidjan-marathon",
-"email": "Pending outreach",
-"why": "Strategic West African race target aligned with emerging athlete placement opportunities",
-"details": [
-{ "icon": "calendar", "label": "Date", "value": "Nov 15, 2026" },
-{ "icon": "trophy", "label": "Prize Pool (Top)", "value": "Competitive" },
-{ "icon": "globe", "label": "Website", "value": "marathon-index.com/races/abidjan-marathon" },
-{ "icon": "email", "label": "Contact Email", "value": "Pending outreach" }
-]
-},
-{
-"id": 3,
-"badge": "Target #3",
-"name": "N'Djamena International Peace Half Marathon",
-"location": "N'Djamena, Chad",
-"image": "assets/djamena.jpg",
-"date": "July 26, 2026",
-"prizePool": "3,000,000 FCFA",
-"website": "https://kms.fr/v5/public/course/5393",
-"email": "Contact via Organizing Committee",
-"why": "Strategic Central African half marathon offering strong prize money and realistic opportunities for LionStride athletes to gain international exposure and compete for podium positions.",
-"details": [
-{ "icon": "calendar", "label": "Date", "value": "July 26, 2026" },
-{ "icon": "globe", "label": "Location", "value": "N'Djamena, Chad" },
-{ "icon": "trophy", "label": "1st Place", "value": "3,000,000 FCFA" },
-{ "icon": "trophy", "label": "2nd Place", "value": "2,000,000 FCFA" },
-{ "icon": "trophy", "label": "3rd Place", "value": "1,000,000 FCFA" },
-{ "icon": "globe", "label": "Distance", "value": "21.1 km" },
-{ "icon": "calendar", "label": "Start Time", "value": "07:00" },
-{ "icon": "email", "label": "Elite Coordinator", "value": "Valentin Betoudji" }
-]
-}
+  {
+    "id": 1,
+    "badge": "Target #1",
+    "name": "Access Bank Lagos City Marathon",
+    "location": "Lagos, Nigeria",
+    "image": "assets/Lagos-Marathon.jpg",
+    "date": "February 2027",
+    "prizePool": "$50,000",
+    "website": "lagoscitymarathon.com",
+    "email": "info@lagoscitymarathon.com",
+    "why": "Strong African International marathon with serious prize money and realistic athlete placement opportunities.",
+    "details": [
+      { "icon": "calendar", "label": "Date", "value": "February 2027" },
+      { "icon": "trophy", "label": "Prize Pool (Top)", "value": "$50,000" },
+      { "icon": "globe", "label": "Website", "value": "lagoscitymarathon.com" },
+      { "icon": "email", "label": "Contact Email", "value": "info@lagoscitymarathon.com" }
+    ]
+  },
+  {
+    "id": 2,
+    "badge": "Target #2",
+    "name": "Abidjan Marathon",
+    "location": "Abidjan, Ivory Coast",
+    "image": "assets/marathondabijan.jpg",
+    "date": "Nov 15, 2026",
+    "prizePool": "Competitive",
+    "website": "marathon-index.com/races/abidjan-marathon",
+    "email": "Pending outreach",
+    "why": "Strategic West African race target aligned with emerging athlete placement opportunities.",
+    "details": [
+      { "icon": "calendar", "label": "Date", "value": "Nov 15, 2026" },
+      { "icon": "trophy", "label": "Prize Pool (Top)", "value": "Competitive" },
+      { "icon": "globe", "label": "Website", "value": "marathon-index.com/races/abidjan-marathon" },
+      { "icon": "email", "label": "Contact Email", "value": "Pending outreach" }
+    ]
+  },
+  {
+    "id": 3,
+    "badge": "Target #3",
+    "name": "N'Djamena International Peace Half Marathon",
+    "location": "N'Djamena, Chad",
+    "image": "assets/djamena.jpg",
+    "date": "July 26, 2026",
+    "prizePool": "3,000,000 FCFA",
+    "website": "https://kms.fr/v5/public/course/5393",
+    "email": "Contact via Organizing Committee",
+    "why": "Strategic Central African half marathon offering strong prize money and realistic opportunities for LionStride athletes to gain international exposure and compete for podium positions.",
+    "details": [
+      { "icon": "calendar", "label": "Date", "value": "July 26, 2026" },
+      { "icon": "globe", "label": "Location", "value": "N'Djamena, Chad" },
+      { "icon": "trophy", "label": "1st Place", "value": "3,000,000 FCFA" },
+      { "icon": "trophy", "label": "2nd Place", "value": "2,000,000 FCFA" },
+      { "icon": "trophy", "label": "3rd Place", "value": "1,000,000 FCFA" },
+      { "icon": "globe", "label": "Distance", "value": "21.1 km" },
+      { "icon": "calendar", "label": "Start Time", "value": "07:00" },
+      { "icon": "email", "label": "Elite Coordinator", "value": "Valentin Betoudji" }
+    ]
+  },
+  {
+    "id": 4,
+    "badge": "Target #4",
+    "name": "Madiba Run 4 Health Semi-Marathon",
+    "location": "Douala, Cameroon",
+    "image": "assets/madiba-douala.jpg",
+    "date": "July 12, 2026",
+    "prizePool": "20,000,000 FCFA shared",
+    "website": "https://qrs.ly/66hdaem",
+    "email": "Via Cameroon Athletics Federation",
+    "why": "Major Douala road race featuring a half marathon, 10K race, and walkathon events, with 20,000,000 FCFA in total prizes. Strong opportunity for LionStride athletes to compete in Central Africa and build visibility.",
+    "details": [
+      { "icon": "calendar", "label": "Date", "value": "July 12, 2026" },
+      { "icon": "globe", "label": "Location", "value": "Douala, Cameroon" },
+      { "icon": "globe", "label": "Events", "value": "21.097 km, 10 km, Walkathons" },
+      { "icon": "calendar", "label": "Start Time", "value": "07:00" },
+      { "icon": "trophy", "label": "Prize Pool", "value": "20,000,000 FCFA" },
+      { "icon": "globe", "label": "Registration", "value": "https://qrs.ly/66hdaem" },
+      { "icon": "email", "label": "Contact", "value": "Cameroon Athletics Federation" }
+    ]
+  },
+  {
+    "id": 5,
+    "badge": "Target #5",
+    "name": "Marathon d'Edea",
+    "location": "Edea, Cameroon",
+    "image": "assets/edea.jpg",
+    "date": "2026",
+    "prizePool": "Competitive",
+    "website": "Pending official publication",
+    "email": "Via Marathon d'Edea Organizing Committee",
+    "why": "Emerging Central African marathon with strong local support and growing elite participation. A strategic race for LionStride athletes seeking marathon opportunities and regional visibility.",
+    "details": [
+      { "icon": "calendar", "label": "Date", "value": "2026 Edition" },
+      { "icon": "globe", "label": "Location", "value": "Edea, Cameroon" },
+      { "icon": "globe", "label": "Distance", "value": "42.195 km" },
+      { "icon": "trophy", "label": "Prize Money", "value": "Competitive" },
+      { "icon": "email", "label": "Contact", "value": "Marathon d'Edea Organizing Committee" }
+    ]
+  }
 ]
 
