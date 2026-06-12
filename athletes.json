@@ -189,5 +189,109 @@
       { "icon": "chart", "label": "Career Development" },
       { "icon": "globe", "label": "Global Exposure" }
     ]
+  },
+
+  {
+    "id": "alfred-kimani",
+    "name": "Alfred Kimani",
+    "sport": "Elite Long-Distance Runner",
+    "nationality": "Kenya 🇰🇪",
+    "specialty": "10,000m, 10K Road Race, Half Marathon",
+    "DateOfBirth": "September 12, 1994",
+    "activeSince": "2016",
+    "image": "assets/athletes/alfred-kimani.jpg",
+
+    "tags": [
+      "10K Best 28:42",
+      "Half Marathon Best 1:03:27",
+      "Kenya Defence Forces Athlete"
+    ],
+
+    "infoFields": [
+      { "label": "Nationality", "value": "Kenya 🇰🇪" },
+      { "label": "Date Of Birth", "value": "September 12, 1994" },
+      { "label": "Location", "value": "Nyahururu, Kenya" },
+      { "label": "Training Camp", "value": "Nyahururu Camp" },
+      { "label": "Primary Events", "value": "10,000m, 10K, Half Marathon" },
+      { "label": "Passport Status", "value": "International Travel Ready" }
+    ],
+
+    "performanceStats": [
+      { "label": "10K PB", "value": "28:42" },
+      { "label": "Half Marathon PB", "value": "1:03:27" },
+      { "label": "Weekly Mileage", "value": "150–160 km" },
+      { "label": "Competitive Running", "value": "8+ Years" }
+    ],
+
+    "description": "Alfred Kimani is a Kenyan long-distance runner specializing in the 10,000m, 10K road races, and half marathon. Based in Nyahururu, Kenya, he trains in a competitive high-altitude environment alongside national and international athletes. A member of the Kenya Defence Forces athletic system, Alfred combines military discipline with strong work ethic and consistent training. His personal bests include 28:42 for 10K and 1:03:27 for the half marathon. Alfred's goal is to break 28 minutes for 10K and 60 minutes for the half marathon while building an international racing career.",
+
+    "results": [
+      {
+        "year": "2026",
+        "event": "Kenya Defence Forces Championships",
+        "result": "2nd Place",
+        "time": "29:40"
+      },
+      {
+        "year": "2025",
+        "event": "Standard Chartered Nairobi 10K",
+        "result": "4th Place",
+        "time": "29:34"
+      },
+      {
+        "year": "2025",
+        "event": "Expressway 10K",
+        "result": "8th Place"
+      },
+      {
+        "year": "2025",
+        "event": "10,000m Track",
+        "result": "3rd Place",
+        "time": "29:15"
+      },
+      {
+        "year": "2025",
+        "event": "Tanzania Half Marathon",
+        "result": "4th Place",
+        "time": "1:03:27"
+      }
+    ],
+
+    "achievements": [
+      {
+        "title": "10K Personal Best — 28:42",
+        "subtitle": "Competitive national-level Kenyan road racing performance",
+        "icon": "trophy"
+      },
+      {
+        "title": "Half Marathon Personal Best — 1:03:27",
+        "subtitle": "Strong international performance in Tanzania",
+        "icon": "medal"
+      },
+      {
+        "title": "Kenya Defence Forces Athlete",
+        "subtitle": "Military athlete competing at national championship level",
+        "icon": "shield"
+      }
+    ],
+
+    "careerPositioning": [
+      {
+        "title": "Breaking the 28-minute barrier for 10K"
+      },
+      {
+        "title": "Progressing toward sub-60 half marathon performances"
+      },
+      {
+        "title": "Building an international professional running career"
+      }
+    ],
+
+    "representation": [
+      { "icon": "trophy", "label": "Elite Athlete Representation" },
+      { "icon": "calendar", "label": "Race Placement" },
+      { "icon": "chart", "label": "Career Development" },
+      { "icon": "globe", "label": "Global Exposure" }
+    ]
   }
 ]
