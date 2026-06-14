@@ -293,5 +293,111 @@
       { "icon": "chart", "label": "Career Development" },
       { "icon": "globe", "label": "Global Exposure" }
     ]
-  }
+  },
+ {
+  "id": "sharon-kipchumba",
+  "name": "Sharon Jemaiyo Kipchumba",
+  "sport": "Elite Long-Distance Runner",
+  "nationality": "Kenya 🇰🇪",
+  "specialty": "Marathon, Half Marathon, 10K",
+  "DateOfBirth": "November 21, 1999",
+  "activeSince": "2020",
+  "image": "assets/athletes/sharon-kipchumba.jpg",
+
+  "tags": [
+    "2:30 Marathon",
+    "Wilmslow Half Marathon Champion",
+    "World Athletics Registered Athlete"
+  ],
+
+  "infoFields": [
+    { "label": "Nationality", "value": "Kenya 🇰🇪" },
+    { "label": "Date Of Birth", "value": "November 21, 1999" },
+    { "label": "Location", "value": "Iten, Kenya" },
+    { "label": "Coach", "value": "Daniel Ngetich" },
+    { "label": "Training Camp", "value": "Imani Training Camp" },
+    { "label": "Specialty", "value": "Marathon, Half Marathon, 10K" }
+  ],
+
+  "performanceStats": [
+    { "label": "Marathon PB", "value": "2:30:10" },
+    { "label": "Half Marathon PB", "value": "1:10:50" },
+    { "label": "10K PB", "value": "32:50" },
+    { "label": "Weekly Mileage", "value": "180 km" }
+  ],
+
+  "description": "Sharon Jemaiyo Kipchumba is a Kenyan long-distance runner based in Iten, Kenya. Specializing in the marathon and half marathon, she trains under Coach Daniel Ngetich at Imani Training Camp. Sharon has competed internationally across Africa and Europe, including races in Kenya, Nigeria, Ghana, Turkey, and the United Kingdom. Her breakthrough performances include winning the women's division at the Wilmslow Half Marathon in England and finishing 10th at the Nairobi City Marathon in a personal best of 2:30:10. Sharon continues to pursue international racing opportunities with the goal of becoming one of Kenya's leading marathon athletes.",
+
+  "results": [
+    {
+      "year": "2025",
+      "event": "Wilmslow Half Marathon (United Kingdom)",
+      "result": "1st Female",
+      "time": "1:10:50"
+    },
+    {
+      "year": "2025",
+      "event": "Nairobi City Marathon",
+      "result": "10th Place",
+      "time": "2:30:10"
+    },
+    {
+      "year": "2026",
+      "event": "Lagos City Marathon",
+      "result": "10th Place",
+      "time": "2:43:00"
+    },
+    {
+      "year": "2026",
+      "event": "Konya Half Marathon (Turkey)",
+      "result": "International Competitor",
+      "time": "1:13"
+    },
+    {
+      "year": "2025",
+      "event": "Millennium Half Marathon (Ghana)",
+      "result": "International Competitor",
+      "time": "1:15"
+    }
+  ],
+
+  "achievements": [
+    {
+      "title": "Wilmslow Half Marathon Champion",
+      "subtitle": "Winner of the women's race in England with a time of 1:10:50",
+      "icon": "trophy"
+    },
+    {
+      "title": "Marathon Personal Best — 2:30:10",
+      "subtitle": "Top 10 finish at Nairobi City Marathon",
+      "icon": "medal"
+    },
+    {
+      "title": "International Racing Experience",
+      "subtitle": "Competed across Africa and Europe",
+      "icon": "globe"
+    }
+  ],
+
+  "careerPositioning": [
+    {
+      "title": "Competing in elite international marathons"
+    },
+    {
+      "title": "Progressing toward sub-2:25 marathon performances"
+    },
+    {
+      "title": "Building a long-term professional running career"
+    }
+  ],
+
+  "representation": [
+    { "icon": "trophy", "label": "Elite Athlete Representation" },
+    { "icon": "calendar", "label": "Race Placement" },
+    { "icon": "chart", "label": "Career Development" },
+    { "icon": "globe", "label": "Global Exposure" }
+  ],
+
+  "worldAthletics": "https://worldathletics.org/athletes/kenya/sharon-kipchumba-14973597"
+}
 ]
