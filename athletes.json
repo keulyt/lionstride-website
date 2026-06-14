@@ -297,8 +297,9 @@
       { "icon": "calendar", "label": "Race Placement" },
       { "icon": "chart", "label": "Career Development" },
       { "icon": "globe", "label": "Global Exposure" }
-    ]
-  },
+    ],
+      "worldAthletics": "https://worldathletics.org/athletes/kenya/alfred-kimani-14936037"
+   },
  {
   "id": "sharon-kipchumba",
   "name": "Sharon Jemaiyo Kipchumba",
