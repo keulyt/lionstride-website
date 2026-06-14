@@ -97,7 +97,7 @@
     ],
 
     "infoFields": [
-      { "label": "Nationality", "value": "Kenya 🇰🇪" },
+      { "label": "Nationality", "value": "Kenya" },
       { "label": "Date Of Birth", "value": "January 1, 1991" },
       { "label": "World Athletics Code", "value": "14985608" },
       { "label": "Coach", "value": "Mohammed Serem" },
@@ -270,8 +270,13 @@
       },
       {
         "title": "Kenya Defence Forces Athlete",
-        "subtitle": "Military athlete competing at national championship level",
+        "subtitle": "World Athletics Registered Athlete",
         "icon": "shield"
+      },
+      {
+       "title": "World Athletics Registered Athlete",
+       "subtitle": "Official athlete profile and verified performances",
+       "icon": "globe"
       }
     ],
 
@@ -298,7 +303,7 @@
   "id": "sharon-kipchumba",
   "name": "Sharon Jemaiyo Kipchumba",
   "sport": "Elite Long-Distance Runner",
-  "nationality": "Kenya 🇰🇪",
+  "nationality": "Kenya",
   "specialty": "Marathon, Half Marathon, 10K",
   "DateOfBirth": "November 21, 1999",
   "activeSince": "2020",
