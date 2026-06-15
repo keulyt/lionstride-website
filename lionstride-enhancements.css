@@ -6,8 +6,11 @@
   padding: 10px 0;
   font-weight: 700;
   white-space: nowrap;
-  position: relative;
-  z-index: 9999;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
 }
 
 .lionstride-ticker-track {
