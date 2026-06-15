@@ -1,0 +1,38 @@
+.lionstride-ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #111827;
+  color: #d4af37;
+  padding: 10px 0;
+  font-weight: 700;
+  white-space: nowrap;
+  position: relative;
+  z-index: 9999;
+}
+
+.lionstride-ticker-track {
+  display: inline-flex;
+  gap: 70px;
+  animation: lionstrideTickerMove 35s linear infinite;
+}
+
+@keyframes lionstrideTickerMove {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.lionstride-wa-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: #d4af37;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.lionstride-wa-link:hover {
+  text-decoration: underline;
+}
