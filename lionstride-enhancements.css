@@ -39,3 +39,6 @@
 .lionstride-wa-link:hover {
   text-decoration: underline;
 }
+body {
+  padding-top: 45px;
+}
