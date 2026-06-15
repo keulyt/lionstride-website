@@ -1,23 +1,30 @@
+/* =====================================================
+   LIONSTRIDE NEWS TICKER
+   ===================================================== */
+
 .lionstride-ticker {
   width: 100%;
-  height: 34px;
+  height: 32px;
   overflow: hidden;
   background: #111827;
   color: #d4af37;
+  font-size: 13px;
   font-weight: 700;
   white-space: nowrap;
+
   position: fixed;
-  top: 0;
+  top: 72px; /* sits BELOW the header */
   left: 0;
-  z-index: 99999;
+  z-index: 9998;
+
   display: flex;
   align-items: center;
 }
 
 .lionstride-ticker-track {
   display: inline-flex;
-  gap: 70px;
-  animation: lionstrideTickerMove 35s linear infinite;
+  gap: 80px;
+  animation: lionstrideTickerMove 40s linear infinite;
   padding-left: 100%;
 }
 
@@ -30,15 +37,14 @@
   }
 }
 
-/* Push the main header below the ticker */
-.header {
-  top: 40px !important;
+/* Push content down to account for ticker */
+body {
+  padding-top: 32px;
 }
 
-/* Push page content below ticker + header */
-body {
-  padding-top: 34px;
-}
+/* =====================================================
+   WORLD ATHLETICS LINK
+   ===================================================== */
 
 .lionstride-wa-link {
   display: inline-block;
@@ -46,8 +52,10 @@ body {
   color: #d4af37;
   font-weight: 700;
   text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .lionstride-wa-link:hover {
   text-decoration: underline;
+  opacity: 0.9;
 }
