@@ -1,31 +1,43 @@
 .lionstride-ticker {
   width: 100%;
+  height: 34px;
   overflow: hidden;
   background: #111827;
   color: #d4af37;
-  padding: 10px 0;
   font-weight: 700;
   white-space: nowrap;
-
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99999;
+  display: flex;
+  align-items: center;
 }
 
 .lionstride-ticker-track {
   display: inline-flex;
   gap: 70px;
   animation: lionstrideTickerMove 35s linear infinite;
+  padding-left: 100%;
 }
 
 @keyframes lionstrideTickerMove {
   from {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
   }
+}
+
+/* Push the main header below the ticker */
+.header {
+  top: 34px !important;
+}
+
+/* Push page content below ticker + header */
+body {
+  padding-top: 34px;
 }
 
 .lionstride-wa-link {
@@ -38,7 +50,4 @@
 
 .lionstride-wa-link:hover {
   text-decoration: underline;
-}
-body {
-  padding-top: 45px;
 }
