@@ -195,7 +195,7 @@
     "id": "alfred-kimani",
     "name": "Alfred Kimani",
     "sport": "Elite Long-Distance Runner",
-    "nationality": "Kenya 🇰🇪",
+    "nationality": "Kenya",
     "specialty": "10,000m, 10K Road Race, Half Marathon",
     "DateOfBirth": "September 12, 1994",
     "activeSince": "2016",
@@ -208,7 +208,7 @@
     ],
 
     "infoFields": [
-      { "label": "Nationality", "value": "Kenya 🇰🇪" },
+      { "label": "Nationality", "value": "Kenya" },
       { "label": "Date Of Birth", "value": "September 12, 1994" },
       { "label": "Location", "value": "Nyahururu, Kenya" },
       { "label": "Training Camp", "value": "Nyahururu Camp" },
