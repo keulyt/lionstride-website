@@ -18,7 +18,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
 
       ticker.appendChild(track);
-      document.body.insertBefore(ticker, document.body.firstChild);
+
+      const header = document.querySelector(".header");
+      if (header) {
+        header.insertAdjacentElement("afterend", ticker);
+      } else {
+        document.body.prepend(ticker);
+      }
     }
   } catch (error) {
     console.warn("LionStride news ticker could not load:", error);
