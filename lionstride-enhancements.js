@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   // Latest news ticker
   try {
-    const response = await fetch("lionstride-news.json");
+    const response = await fetch("./lionstride-news.json");
     const newsItems = await response.json();
 
     if (Array.isArray(newsItems) && newsItems.length > 0) {
