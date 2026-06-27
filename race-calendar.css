@@ -1,0 +1,68 @@
+.race-calendar-section {
+  padding: 90px 5%;
+  background: #0a0a0c;
+}
+
+.race-calendar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.race-month {
+  margin-bottom: 48px;
+}
+
+.race-month-title {
+  color: #c9a84c;
+  font-size: 2rem;
+  margin-bottom: 22px;
+  font-family: var(--font-display);
+}
+
+.race-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.race-card {
+  background: #18181f;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.race-card h3 {
+  color: #f0ece4;
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+}
+
+.race-meta {
+  color: #a8a49c;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.race-status {
+  display: inline-block;
+  margin: 12px 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(201, 168, 76, 0.12);
+  color: #c9a84c;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.race-athletes {
+  margin-top: 14px;
+  color: #f0ece4;
+  font-size: 0.95rem;
+}
+
+.race-score {
+  margin-top: 12px;
+  color: #c9a84c;
+  font-weight: 700;
+}
