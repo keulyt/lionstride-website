@@ -1,0 +1,77 @@
+[
+  {
+    "month": "June 2026",
+    "races": [
+      {
+        "name": "Francophone Workers' International Marathon",
+        "location": "Édéa, Cameroon",
+        "date": "June 27, 2026",
+        "distance": "Half Marathon / Road Race",
+        "category": "Road Race",
+        "status": "Confirmed",
+        "athletes": ["Geoffrey Kipchirchir Kirwa"],
+        "opportunity": "Development Race",
+        "score": "🦁🦁🦁"
+      }
+    ]
+  },
+  {
+    "month": "July 2026",
+    "races": [
+      {
+        "name": "Madiba International Half Marathon",
+        "location": "Douala, Cameroon",
+        "date": "July 12, 2026",
+        "distance": "Half Marathon",
+        "category": "Road Race",
+        "status": "Confirmed",
+        "athletes": ["Geoffrey Kipchirchir Kirwa", "Alfred Kimani", "Sharon Jemaiyo Kipchumba"],
+        "opportunity": "Excellent Opportunity",
+        "score": "🦁🦁🦁🦁"
+      },
+      {
+        "name": "N'Djamena International Half Marathon",
+        "location": "N'Djamena, Chad",
+        "date": "July 26, 2026",
+        "distance": "Half Marathon",
+        "category": "Road Race",
+        "status": "Confirmed",
+        "athletes": ["Geoffrey Kipchirchir Kirwa", "Alfred Kimani", "Sharon Jemaiyo Kipchumba"],
+        "opportunity": "Excellent Opportunity",
+        "score": "🦁🦁🦁🦁"
+      }
+    ]
+  },
+  {
+    "month": "October 2026",
+    "races": [
+      {
+        "name": "Douala International Marathon",
+        "location": "Douala, Cameroon",
+        "date": "October 24–25, 2026",
+        "distance": "Marathon",
+        "category": "Road Race",
+        "status": "Planned",
+        "athletes": ["Recruiting"],
+        "opportunity": "Target Race",
+        "score": "🦁🦁🦁"
+      }
+    ]
+  },
+  {
+    "month": "December 2026",
+    "races": [
+      {
+        "name": "Libreville International Marathon",
+        "location": "Libreville, Gabon",
+        "date": "December 5–6, 2026",
+        "distance": "Marathon",
+        "category": "Road Race",
+        "status": "Target",
+        "athletes": ["Recruiting"],
+        "opportunity": "Target Race",
+        "score": "🦁🦁🦁"
+      }
+    ]
+  }
+]
