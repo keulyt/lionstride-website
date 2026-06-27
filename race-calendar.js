@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function getFlag(location) {
-    if (location.includes("Cameroon")) return "🇨🇲";
-    if (location.includes("Chad")) return "🇹🇩";
-    if (location.includes("Gabon")) return "🇬🇦";
+    if (location.includes("Cameroon")) return "CAMEROON";
+    if (location.includes("Chad")) return "CHAD";
+    if (location.includes("Gabon")) return "GABON";
     return "🌍";
   }
 });
