@@ -1,90 +1,52 @@
-.race-calendar-section {
-  background:
-    radial-gradient(circle at top left, rgba(201,168,76,0.12), transparent 35%),
-    linear-gradient(180deg, #0a0a0c 0%, #111116 100%);
-}
+document.addEventListener("DOMContentLoaded", async () => {
+  const container = document.getElementById("raceCalendarContainer");
+  if (!container) return;
 
-.race-month {
-  margin-top: 56px;
-}
+  try {
+    const response = await fetch("./race-calendar.json");
 
-.race-month-title {
-  font-family: var(--font-display);
-  color: #c9a84c;
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 24px;
-  border-bottom: 1px solid rgba(201,168,76,0.25);
-  padding-bottom: 12px;
-}
+    if (!response.ok) {
+      throw new Error("Race calendar JSON not found");
+    }
 
-.race-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-}
+    const months = await response.json();
 
-.race-card {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(145deg, rgba(24,24,31,0.95), rgba(10,10,12,0.95));
-  border: 1px solid rgba(201,168,76,0.28);
-  border-radius: 26px;
-  padding: 30px;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
-}
+    container.innerHTML = months.map(month => `
+      <div class="race-month">
+        <h3 class="race-month-title">${month.month}</h3>
 
-.race-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(201,168,76,0.18), transparent 35%);
-  pointer-events: none;
-}
+        <div class="race-grid">
+          ${month.races.map(race => `
+            <div class="race-card">
+              <span class="race-status">${race.status}</span>
 
-.race-card h3 {
-  position: relative;
-  font-family: var(--font-display);
-  color: #f0ece4;
-  font-size: 1.7rem;
-  line-height: 1.1;
-  margin-bottom: 18px;
-}
+              <h3>${race.name}</h3>
 
-.race-meta {
-  position: relative;
-  color: #a8a49c;
-  font-size: 0.95rem;
-  margin-bottom: 8px;
-}
+              <div class="race-meta">📍 ${race.location}</div>
+              <div class="race-meta">📅 ${race.date}</div>
+              <div class="race-meta">🏃 ${race.distance}</div>
+              <div class="race-meta">🌍 ${race.category}</div>
 
-.race-status {
-  position: relative;
-  display: inline-block;
-  margin: 16px 0;
-  padding: 7px 14px;
-  border-radius: 999px;
-  background: rgba(201,168,76,0.14);
-  color: #dfc276;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+              <div class="race-athletes">
+                <strong>LionStride Athletes</strong>
+                <span>${race.athletes.join(", ")}</span>
+              </div>
 
-.race-athletes {
-  position: relative;
-  margin-top: 14px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  color: #f0ece4;
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
+              <div class="race-score">
+                ${race.score} ${race.opportunity}
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `).join("");
 
-.race-score {
-  position: relative;
-  margin-top: 18px;
-  color: #c9a84c;
-  font-weight: 800;
-  font-size: 0.95rem;
-}
+  } catch (error) {
+    console.warn("Race calendar could not load:", error);
+    container.innerHTML = `
+      <p style="color:#c9a84c; text-align:center;">
+        Race calendar is currently being updated.
+      </p>
+    `;
+  }
+});
